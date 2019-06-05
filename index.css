@@ -1,0 +1,51 @@
+body {
+	--bgColor: #126975;
+  --textColor: white;
+  --accentColorMain: black;
+
+	font-family: "____";
+	min-height: 100vh;
+	color: var(--textColor);
+	background-color: var(--bgColor);
+	overflow: hidden;
+  margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	transition: color 0.2s;
+}
+
+a:hover,
+a:focus {
+	color: var(--accentColorMain);
+}
+
+.temp {
+  font-size: 10vh;
+  position: absolute;
+  width: 100%;
+  
+  text-align: center;
+  top: 40%;
+}
+
+#mobile {
+  display: none;
+}
+
+#desktop {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  #mobile {
+    display: block;
+  }
+  #desktop {
+    display: none;
+  }
+}
