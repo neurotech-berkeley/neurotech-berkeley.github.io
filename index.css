@@ -11,15 +11,20 @@
 								#0B2041
 */
 
+@font-face {
+   font-family: Gilroy;
+   src: url(fonts/Gilroy-Light.otf)
+ }
+
+
 html, body {
 	--bgColor: #0B2041;
-  --textColor: #51C3C5;
-  --accentColorMain: black;
-	font-family: "Coves";
+  --primaryColor: #51C3C5;
+  --secondaryColor: #055869;
+	font-family: "Gilroy";
 	min-height: 100vh;
-	color: var(--textColor);
+	color: var(--primaryColor);
 	background-color: var(--bgColor);
-	/* overflow: hidden; */
   margin: 0px;
 	padding: 0px;
 	-webkit-font-smoothing: antialiased;
@@ -39,15 +44,14 @@ footer {
 
 a {
 	text-decoration: none;
-	color: var(--textColor);
+	color: var(--primaryColor);
 	outline: none;
 	transition: color 0.2s;
-
 }
 
 a:hover,
 a:focus {
-	color: var(--accentColorMain);
+	color: var(--secondaryColor);
 }
 
 .temp {

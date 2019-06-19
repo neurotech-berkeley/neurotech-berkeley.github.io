@@ -9,41 +9,42 @@ header {
 }
 
 .logoWrapper {
-  margin: auto;
-  margin-left: 50px;
-  margin-right: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .sitePages {
-  margin-left: 20%;
-  width: 80%;
+  position: absolute;
+  right: 0px;
   display: flex;
   flex-display: row;
   justify-content: center;
   text-align: center;
   align-items: center;
+
 }
 
 .sitePages a {
-  padding: 30px 40px 30px 40px;
+  padding: 31px 40px 26px 40px;
 }
 
 .sitePages a:hover {
-  background-color: #055869;
+  background-color: var(--secondaryColor);
   color: white;
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
 }
 
-#join {
+.sitePages a:last-child {
   padding: 30px 40px 27px 40px;
-  background-color: #51C3C5;
+  background-color: var(--primaryColor);
   color: black;
 }
 
-#join:hover {
-  background-color: #055869;
+.sitePages a:last-child:hover {
+  background-color: var(--secondaryColor);
   color: white;
 }
-
 
 li {
   list-style: none;
