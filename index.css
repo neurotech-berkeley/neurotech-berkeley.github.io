@@ -1,22 +1,48 @@
-body {
-	--bgColor: #126975;
-  --textColor: white;
-  --accentColorMain: black;
+/* MIND Colors:
+								#87CFCC
+								#CB8C2F
+								#EBAB4D
+								#FFBD58
+								#FFD058
 
-	font-family: "____";
+	Logo Colors:
+								#51C3C5
+								#055869
+								#0B2041
+*/
+
+html, body {
+	--bgColor: #0B2041;
+  --textColor: #51C3C5;
+  --accentColorMain: black;
+	font-family: "Coves";
 	min-height: 100vh;
 	color: var(--textColor);
 	background-color: var(--bgColor);
-	overflow: hidden;
-  margin: 0;
+	/* overflow: hidden; */
+  margin: 0px;
+	padding: 0px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	height: 1000px;
+	flex: 1 0 auto;
+}
+
+footer {
+	flex-shrink: 0;
 }
 
 a {
 	text-decoration: none;
+	color: var(--textColor);
 	outline: none;
 	transition: color 0.2s;
+
 }
 
 a:hover,
@@ -28,7 +54,7 @@ a:focus {
   font-size: 10vh;
   position: absolute;
   width: 100%;
-  
+
   text-align: center;
   top: 40%;
 }
