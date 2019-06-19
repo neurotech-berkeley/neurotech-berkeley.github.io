@@ -11,28 +11,32 @@
 								#0B2041
 */
 
+/* Gilroy Font Family */
 @font-face {
    font-family: Gilroy;
    src: url(fonts/Gilroy-Light.otf)
  }
 
-
+/* General CSS for document */
 html, body {
 	--bgColor: #0B2041;
   --primaryColor: #51C3C5;
   --secondaryColor: #055869;
-	font-family: "Gilroy";
-	min-height: 100vh;
-	color: var(--primaryColor);
-	background-color: var(--bgColor);
-  margin: 0px;
-	padding: 0px;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	--navHeight: 80px;
+	--navItemWidth: 160px;
 	display: flex;
 	flex-direction: column;
+  margin: 0px;
+	padding: 0px;
+	min-height: 100vh;
+	font-family: "Gilroy";
+	color: var(--primaryColor);
+	background-color: var(--bgColor);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
+/* Fixed footer */
 .content {
 	height: 1000px;
 	flex: 1 0 auto;
@@ -42,40 +46,15 @@ footer {
 	flex-shrink: 0;
 }
 
+/* Links */
 a {
 	text-decoration: none;
-	color: var(--primaryColor);
+	color: var(--secondaryColor);
 	outline: none;
 	transition: color 0.2s;
 }
 
 a:hover,
 a:focus {
-	color: var(--secondaryColor);
-}
-
-.temp {
-  font-size: 10vh;
-  position: absolute;
-  width: 100%;
-
-  text-align: center;
-  top: 40%;
-}
-
-#mobile {
-  display: none;
-}
-
-#desktop {
-  display: block;
-}
-
-@media (max-width: 800px) {
-  #mobile {
-    display: block;
-  }
-  #desktop {
-    display: none;
-  }
+	color: var(--primaryColor);
 }
