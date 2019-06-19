@@ -23,6 +23,7 @@ a:hover {
 
 .left {
   width: 30%;
+  padding-top: 40px;
   padding-left: 50px;
   display: flex;
   flex-direction: column;
@@ -75,9 +76,18 @@ hr {
 
   .statement {
     width: 75%;
+    padding: 25px;
+  }
+
+  .pages {
+    padding-bottom: 30px;
   }
 
   hr {
     width: 90%;
+  }
+
+  .copyright {
+    padding-top: 50px;
   }
 }

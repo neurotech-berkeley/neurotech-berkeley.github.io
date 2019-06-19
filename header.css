@@ -1,0 +1,50 @@
+header {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-display: row;
+}
+
+.logoWrapper {
+  margin: auto;
+  margin-left: 50px;
+  margin-right: 0px;
+}
+
+.sitePages {
+  margin-left: 20%;
+  width: 80%;
+  display: flex;
+  flex-display: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.sitePages a {
+  padding: 30px 40px 30px 40px;
+}
+
+.sitePages a:hover {
+  background-color: #055869;
+  color: white;
+}
+
+#join {
+  padding: 30px 40px 27px 40px;
+  background-color: #51C3C5;
+  color: black;
+}
+
+#join:hover {
+  background-color: #055869;
+  color: white;
+}
+
+
+li {
+  list-style: none;
+}
