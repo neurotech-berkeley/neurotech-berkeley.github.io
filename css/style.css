@@ -10339,6 +10339,7 @@ header .search-form .form-control:-moz-placeholder {
 
 .site-footer {
   padding: 7em 0;
+  /* background: #0B2041; */
   background: #333;
 }
 
