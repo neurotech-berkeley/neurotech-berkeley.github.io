@@ -11285,3 +11285,11 @@ figure figcaption {
 .portfolio-section .mb-4 {
   color: #fff;
 }
+
+.d-block img {
+  padding: 8px;
+}
+
+.d-block a {
+  text-decoration: none;
+}
