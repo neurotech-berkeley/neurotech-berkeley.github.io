@@ -485,6 +485,7 @@ mark,
   height: auto;
 }
 
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -10090,7 +10091,7 @@ header .search-form .form-control:-moz-placeholder {
 }
 
 .section {
-  padding: 7em 0;
+  padding: 3em 0;
 }
 
 /* .section-info {
