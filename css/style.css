@@ -11294,3 +11294,7 @@ figure figcaption {
 .d-block a {
   text-decoration: none;
 }
+
+@media (min-width: 576px) {
+
+}
