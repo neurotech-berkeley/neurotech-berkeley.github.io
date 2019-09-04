@@ -10091,8 +10091,52 @@ header .search-form .form-control:-moz-placeholder {
 }
 
 .section {
-  padding: 3em 0;
+  padding: 3em 0 2em 0;
 }
+
+/* #software {
+background-color: #055869;
+}
+#publications {
+background-color: #0B2041;
+color: white;
+}
+#outreach {
+background-color: #055869;
+}
+#hardware {
+background-color: #0B2041;
+color: white;
+} */
+
+
+@media (max-width: 991.98px) {
+  .section {
+    padding: 3em 0;
+  }
+  #softwareTile img {
+    content:url("../images/software_H.jpg");
+  }
+  #hardwareTile img {
+    content:url("../images/hardware_H.jpg");
+  }
+
+
+  #software img {
+    display: none;
+  }
+  #publications img {
+    display: none;
+  }
+  #outreach img {
+    display: none;
+  }
+  #hardware img {
+    display: none;
+  }
+}
+
+
 
 /* .section-info {
   padding-bottom: 3em 0;
@@ -11293,4 +11337,8 @@ figure figcaption {
 
 .d-block a {
   text-decoration: none;
+}
+
+@media (min-width: 576px) {
+
 }
