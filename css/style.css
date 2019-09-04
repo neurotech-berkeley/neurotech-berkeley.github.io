@@ -11342,3 +11342,12 @@ figure figcaption {
 @media (min-width: 576px) {
 
 }
+
+#asterisk {
+  float: right;
+  margin-right: 20px;
+}
+
+#red {
+  color: red;
+}
