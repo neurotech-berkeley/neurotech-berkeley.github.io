@@ -11359,6 +11359,11 @@ figure figcaption {
   height: 100%;
 }
 
-.darken {
-  /* filter: brightness(50%); */
+/* .darken {
+  filter: brightness(50%);
+} */
+
+.textStuff {
+  z-index: 5;
+  filter: brightness(300%);
 }
