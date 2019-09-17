@@ -624,6 +624,10 @@ pre code {
   padding-left: 15px;
 }
 
+.col-lg-4 {
+  width: 360px;
+}
+
 .col {
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -10035,7 +10039,7 @@ header .search-form .form-control:-moz-placeholder {
   font-weight: 700 !important;
   text-transform: uppercase;
   margin-bottom: 30px;
-  margin-left: 0.5em;
+  /* margin-left: 0.5em; */
 }
 
 .slider-item .slider-text h1 span {
@@ -11347,4 +11351,14 @@ figure figcaption {
 
 #red {
   color: red;
+}
+
+.col-lg-4 {
+  display: block;
+  width: 360px;
+  height: 100%;
+}
+
+.darken {
+  /* filter: brightness(50%); */
 }
