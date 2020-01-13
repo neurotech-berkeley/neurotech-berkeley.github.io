@@ -10108,7 +10108,7 @@ color: white;
 #outreach {
 background-color: #055869;
 }
-#hardware {
+#devices {
 background-color: #0B2041;
 color: white;
 } */
@@ -10119,10 +10119,10 @@ color: white;
     padding: 3em 0;
   }
   #softwareTile img {
-    content:url("../images/software_H.jpg");
+    content:url("../images/division_banners/software.png");
   }
-  #hardwareTile img {
-    content:url("../images/hardware_H.jpg");
+  #devicesTile img {
+    content:url("../images/division_banners/devices.png");
   }
 
 
@@ -10135,7 +10135,13 @@ color: white;
   #outreach img {
     display: none;
   }
-  #hardware img {
+  #devices img {
+    display: none;
+  }
+  #consulting img {
+    display: none;
+  }
+  #education img {
     display: none;
   }
 }
