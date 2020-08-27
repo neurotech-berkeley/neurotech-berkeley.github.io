@@ -11878,3 +11878,19 @@ figure figcaption {
         padding: 0;
     }
 }
+
+.media-custom .media-body {
+    padding: 0 !important;
+}
+
+.media-custom .media-body p, h3 {
+    margin-bottom: 0 !important;
+}
+
+.alumni {
+    padding: 30px !important;
+}
+
+.alumni h3 {
+    font-size: 15px !important;
+}
