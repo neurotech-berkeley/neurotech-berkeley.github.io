@@ -10481,10 +10481,10 @@ color: white;
         padding: 3em 0 0 0;
     }
     #softwareTile img {
-        content: url("images/division_banners/software.png");
+        /* content: url("images/division_banners/software.png"); */
     }
     #devicesTile img {
-        content: url("images/division_banners/devices.png");
+        /* content: url("images/division_banners/devices.png"); */
     }
     #software img {
         display: none;
@@ -11932,7 +11932,6 @@ header .navbar-brand {
     margin-bottom: 0 !important;
 }
 
-
 @media (max-width: 991.98px) {
     #flyer {
         margin-right: 0 !important;
@@ -11945,5 +11944,10 @@ header .navbar-brand {
     }
     #contents {
         flex-direction: column;
+    }
+    
+    .alumni {
+        width: 33%;
+        padding: 10px !important;
     }
 }
