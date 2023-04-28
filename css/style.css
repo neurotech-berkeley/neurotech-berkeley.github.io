@@ -516,10 +516,11 @@ mark,
     width: 300px;
     height: 300px;
     object-fit: cover;
+
 }
 
 .img-fluid-alumni {
-    width: 129px;
+    width: 130px;
     height: 130px;
     object-fit: cover;
 }
