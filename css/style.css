@@ -5,6 +5,47 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+ .text-black {
+    color: black !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+ .custom-header {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    position: fixed;  /* Fix the navbar to the viewport */
+    top: 0;  /* Align to the top */
+    left: 0;  /* Align to the left */
+    width: 100%;  /* Full width */
+    z-index: 1000;  /* Ensure navbar is above other elements */
+}
+
+.custom-header .navbar-brand,
+.custom-header .nav-link {
+    color: rgb(255, 255, 255);  /* This will make them dark gray */
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Ensure it stays above other elements */
+}
+
+.slider-item {
+    padding-top: 100px; /* Adjust this value based on the height of your header */
+}
+
+.custom-header .navbar-toggler-icon {
+    background-color: #333;  /* This changes the toggler (hamburger) icon color */
+}
+
  .transparent-black-box {
     background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
     padding: 10px 20px; /* 10px top and bottom padding, 20px left and right padding */
@@ -736,7 +777,7 @@ mark,
 
 .initialism {
     font-size: 90%;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .blockquote {
@@ -10788,7 +10829,7 @@ textarea.form-control {
 
 .btn {
     font-size: 13px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: .2em;
     font-weight: 900;
 }
@@ -10864,7 +10905,7 @@ header .navbar-toggler {
 }
 
 header .navbar-brand {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: .2em;
     font-weight: 400;
     color: #fff;
@@ -10978,7 +11019,7 @@ header .navbar .cta-btn a {
     color: #000 !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding-top: 26px !important;
     padding-bottom: 26px !important;
     line-height: 1;
@@ -11083,7 +11124,7 @@ header .search-form .form-control:-moz-placeholder {
 .blog .media .post-meta {
     font-size: 14px;
     letter-spacing: .2em;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .blog .media>a {
@@ -11340,7 +11381,7 @@ header .search-form .form-control:-moz-placeholder {
     color: #fff;
     line-height: 1.2;
     font-weight: 700 !important;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-bottom: 30px;
     /* margin-left: 0.5em; */
 }
@@ -11598,7 +11639,7 @@ color: white;
 
 .media-feature h3 {
     font-size: 16px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .media-feature:hover,
@@ -11625,7 +11666,7 @@ color: white;
 .media-custom .meta-post {
     color: #ced4da;
     font-size: 13px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .media-custom>a {
@@ -11704,7 +11745,7 @@ color: white;
 }
 
 .post-meta {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 12px;
     color: #b3b3b3;
     letter-spacing: .2em;
@@ -11741,7 +11782,7 @@ color: white;
     letter-spacing: .1em;
     font-weight: bold;
     color: #fff;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .site-footer .footer-link li {
@@ -11794,7 +11835,7 @@ color: white;
     display: block;
     font-size: 12px;
     color: rgba(255, 255, 255, 0.4);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-bottom: 10px;
 }
 
@@ -11890,7 +11931,7 @@ color: white;
 
 .block-41 .block-41-subheading>div {
     display: inline-block;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .block-41 .block-41-subheading>div.block-41-line {
@@ -12153,7 +12194,7 @@ color: white;
 
 .btn-outline-black {
     border: 2px solid #000;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 14px;
     font-weight: bold;
     border-radius: 0px;
@@ -12169,7 +12210,7 @@ color: white;
 
 .btn-outline-white {
     border: 2px solid #fff;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 14px;
     font-weight: bold;
     border-radius: 0px;
@@ -12184,7 +12225,7 @@ color: white;
 }
 
 .section-title {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: 300;
 }
 
@@ -12296,7 +12337,7 @@ color: white;
 }
 
 .readmore {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: .9rem;
     padding-right: 20px;
     display: inline-block;
@@ -12372,7 +12413,7 @@ figure figcaption {
 }
 
 .comment-list li .comment-body .meta {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 13px;
     letter-spacing: .1em;
     color: #ccc;
@@ -12382,7 +12423,7 @@ figure figcaption {
     padding: 5px 10px;
     background: #e6e6e6;
     color: #000;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 14px;
 }
 
@@ -12623,7 +12664,7 @@ figure figcaption {
 .work-thumb .work-text h2 {
     color: #fff;
     font-weight: 300;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin-bottom: 0;
     font-size: 1.5rem;
 }

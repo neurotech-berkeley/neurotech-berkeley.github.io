@@ -24,84 +24,74 @@
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        .rounded-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px 50px; 
+            border-radius: 15px; 
+            display: inline-block; 
+            max-width: 70%; 
+    }
+    </style>
+
 </head>
 
 <body>
-
-    <header role="banner">
-        <nav class="navbar navbar-expand-lg  bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand " href="index.html">Neurotech@Berkeley</a>
-
+    <header role="banner" class="fixed-header">
+        <nav class="navbar navbar-expand-lg bg-dark custom-header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/GradientLogo.png" alt="Logo" style="height: 30px; margin-right: 5px;">
+                    <span id="logoText" style="font-weight: bolder; color: white;">Neurotech@Berkeley</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
                     aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-
                 <div class="collapse navbar-collapse" id="navbarsExample05">
                     <ul class="navbar-nav pl-md-5 ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="divisions.html">Divisions</a>
-                            <!-- <ul>
-                                <li class="dropdown-item">
-                                    <a href="divisions_software.html">Venture: Software</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_devices.html"> Venture: Devices</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_consulting.html">Consulting</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_outreach.html">Outreach</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_publications.html">Publications</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_education.html">Education</a>
-                                </li>
-                            </ul> -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="divisions.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="divisions_devices.html">Devices</a>
+                                <a class="dropdown-item" href="divisions_education.html">Education</a>
+                                <a class="dropdown-item" href="divisions_publications.html">Publication</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://ucbneurotech.medium.com/">Blog</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="mind.html">MIND</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="join.html">Join</a>
-                        </li>
-                        <li class="nav=item">
+                        <li class="nav-item"> <!-- Note: Corrected the typo 'nav=item' to 'nav-item' -->
                             <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="btn nav-btn-highlight app-btn-bg" href="/join.html" style="color: #000; font-weight: 900; text-transform: none; margin-top: 24px; vertical-align: middle;">Apply</a>
+                        </li>      
                     </ul>
-
                 </div>
             </div>
         </nav>
     </header>
     <!-- END header -->
-
-    <div class="inner-page">
-        <div class="slider-item overlay darken"
-            style="background-image: url('images/9W4A9692_shorter_v1.jpg'); background-color: #0B2041; height: 82vh;"
-            data-stellar-background-ratio="0.5">
+<!-- id="imageSection" -->
+    <div class="inner-page" id="imageSection"> 
+        <div class="slider-item overlay darken" style="background-image: url('images/9W4A9692_shorter_v1.jpg'); background-color: #0B2041; height: 104vh; background-position: center center;" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
             <div class="container">
-                <div class="row slider-text align-items-center justify-content-center">
-                    <div class="col-lg-9 text-center col-sm-12 element-animate">
-                        <h1 class="mb-4" style="text-align: center">About</h1>
-                        <p class="custom-breadcrumbs">The brains behind Neurotech@Berkeley</p>
+                <div class="row slider-text justify-content-center align-items-center">
+                    <div class="col-md-10 col-sm-12 ftco-animate mb-4 text-center fadeInUp ftco-animated">
+                        <div class="rounded-box">
+                            <h1 class="mb-3 bread" style="color: #ffffff;">About</h1>
+                            <p>The brains behind Neurotech@Berkeley!</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div>         
         </div>
     </div>
 
@@ -131,424 +121,18 @@
         </div>
     </div>
 
+    <!-- Begin Airtable Embed -->
     <div class="section">
         <div class="container">
-            <div class="row justify-content-center mb-5 element-animate">
-                <div class="col-md-8 text-center">
-                    <h2 class="mb-4 section-title">Meet Our <strong>Team</strong></h2>
-                </div>
-            </div>
             <div class="row">
-                <!-- ----------------------------------------------------------------------------------------------------------------- -->
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/2022-2023/Haya Halabieh.jpg" alt="Placeholder"
-                                class="img-fluid" style="object-position: 50% 40%;"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Haya Halabieh
-                            </h3>
-                            <p> President
-                            </p>
-                            <a href="https://www.linkedin.com/in/hayahalabieh/"><img
-                                    src="images/linkedinLogoSmall.png" /></a>
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
+                <div class="col-12">
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/appQuLaPLp019z1pR/shrEkw3gQ7tkPTzTY?backgroundColor=blue&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
                 </div>
-
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/2022-2023/Sophia Delis.jpg" alt="Placeholder"
-                                class="img-fluid" style="object-position: 50% 42%;"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Sophia Delis
-                            </h3>
-                            <p> VP of External
-                            </p>
-                            <a href="https://www.linkedin.com/in/sophia-delis-9b5b441b8/"><img
-                                    src="images/linkedinLogoSmall.png" /></a>
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ----------------------------------------------------------------------------------------------------------------- -->
-
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/2022-2023/Ashwin_Rammohan_Headshot.jpg" alt="Placeholder"
-                                class="img-fluid"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Ashwin Rammohan
-                            </h3>
-                            <p> VP of Projects
-                            </p>
-                            <a href="https://www.linkedin.com/in/ashwin-rammohan/"><img
-                                    src="images/linkedinLogoSmall.png" /></a>
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/2022-2023/Abhi Gundrala.jpg" alt="Placeholder"
-                                class="img-fluid" style="object-position: 50% 40%;"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Abhinav Gundrala
-                            </h3>
-                            <p> VP of Education
-                            </p>
-                            <a href="https://www.linkedin.com/in/abhinav-gundrala/"><img
-                                    src="images/linkedinLogoSmall.png" /></a>
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/Placeholder.png" alt="Placeholder" class="img-fluid"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Shreyash Iyengar
-                            </h3>
-                            <p> VP of Consulting
-                            </p>
-                            <!-- <a href="https://www.linkedin.com/in/shreyashsridhariyengar/"><img
-                                    src="images/linkedinLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ----------------------------------------------------------------------------------------------------------------- -->
-
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/2022-2023/Pratyush Das.jpg" alt="Placeholder"
-                                class="img-fluid"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Pratyush Das
-                            </h3>
-                            <p> Devices Co-Lead
-                            </p>
-                            <a href="https://www.linkedin.com/in/pratdas/">
-                                <img src="images/linkedinLogoSmall.png" />
-                            </a>
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/Placeholder.png" alt="Placeholder" class="img-fluid"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Inga Zhuravleva
-                            </h3>
-                            <p> Devices Co-Lead
-                            </p>
-                            <!-- <a href="#"><img src="images/linkedinLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <a href="http://ingarobotics.com/"><img src="images/globeLogoSmall.png" /></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ----------------------------------------------------------------------------------------------------------------- -->
-
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/Placeholder.png" alt="Placeholder" class="img-fluid"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Anisha Iyer
-                            </h3>
-                            <p> Software Lead
-                            </p>
-                            <a href="https://www.linkedin.com/in/anisha-iyer/"><img
-                                    src="images/linkedinLogoSmall.png" /></a>
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- ----------------------------------------------------------------------------------------------------------------- -->
-
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/Placeholder.png" alt="Placeholder" class="img-fluid"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Mary Shahinyan
-                            </h3>
-                            <p> Publications Co-Lead
-                            </p>
-                            <!-- <a href="#"><img src="images/linkedinLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/2022-2023/Jacob Marks.jpg" alt="Placeholder"
-                                class="img-fluid" style="object-position: 50% 20%;"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Jacob Marks
-                            </h3>
-                            <p> Publications Co-Lead
-                            </p>
-                            <a href="https://www.linkedin.com/in/jacob-marks-0a159a202/"><img
-                                    src="images/linkedinLogoSmall.png" /></a>
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ----------------------------------------------------------------------------------------------------------------- -->
-
-
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/2022-2023/Jaquelyn Borcea.jpg" alt="Placeholder"
-                                class="img-fluid"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Jaquelyn Borcea
-                            </h3>
-                            <p> Outreach Co-Lead
-                            </p>
-                            <!-- <a href="#"><img src="images/linkedinLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/2022-2023/Selina Li.jpg" alt="Placeholder"
-                                class="img-fluid"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Selina Li
-                            </h3>
-                            <p> Outreach Co-Lead
-                            </p>
-                            <!-- <a href="#"><img src="images/linkedinLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ----------------------------------------------------------------------------------------------------------------- -->
-
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/Placeholder.png" alt="Placeholder" class="img-fluid"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Kaleb Dawit
-                            </h3>
-                            <p> DeCal Lead
-                            </p>
-                            <!-- <a href="#"><img src="images/linkedinLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/2022-2023/Lucas Richardson.jpg" alt="Placeholder"
-                                class="img-fluid" style="object-position: 50% 40%;"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Lucas Richardson
-                            </h3>
-                            <p> NMEP Lead
-                            </p>
-                            <!-- <a href="#"><img src="images/linkedinLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/githubLogoSmall.png" /></a> -->
-                            <!-- <a href="#"><img src="images/globeLogoSmall.png" /></a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ----------------------------------------------------------------------------------------------------------------- -->
-
-            </div>
-            <!-- ----------------------------------------------------------------------------------------------------------------- -->
-
-            <div class="row justify-content-center mb-5 element-animate">
-                <div class="col-md-8 text-center">
-                    <h4 class="mb-4 section-title"> <strong>Alumni</strong> </h4>
-                </div>
-            </div>
-            <div class="row">
-                <!-- ----------------------------------------------------------------------------------------------------------------- -->
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/2022-2023/Izzy Baldacci.jpg" alt="Placeholder"
-                                class="img-fluid-alumni" style="object-position: 50% 42%"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Isabella Baldacci
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/2022-2023/Connor Kennedy.jpg" alt="Placeholder"
-                                class="img-fluid-alumni" style="object-position: 50% 35%"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Connor Kennedy
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/2022-2023/Deven Navani.jpg" alt="Placeholder"
-                                class="img-fluid-alumni" style="object-position: 50% 30%"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Deven Navani
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/alumni/Aditya.jpg" alt="Placeholder"
-                                class="img-fluid-alumni"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Aditya Palacharla
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/alumni/Mridula.jpg" alt="Placeholder"
-                                class="img-fluid-alumni"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Mridula Vardhan
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/alumni/Divya.jpeg" alt="Placeholder"
-                                class="img-fluid-alumni"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Divya Rodrigues
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/alumni/Philip.JPG" alt="Placeholder"
-                                class="img-fluid-alumni"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Philip Papapolyzos
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/alumni/Eliott.jpeg" alt="Placeholder"
-                                class="img-fluid-alumni"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Eliott Park
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/Amy_Wang.jpg" alt="Placeholder" class="img-fluid"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Amy Wang
-                            </h3>
-                        </div>
-                    </div>
-                </div> -->
-
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/Chris_Zou.JPG" alt="Placeholder"
-                                class="img-fluid-alumni"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Chris Zou
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/Lillian.jpg" alt="Placeholder" class="img-fluid-alumni"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Lillian Shallow
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/Kyle.jfif" alt="Placeholder" class="img-fluid-alumni"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Kyle Griffin
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/Placeholder.png" alt="Placeholder"
-                                class="img-fluid-alumni"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Aashritha Srirambhatla
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 alumni">
-                    <div class="media d-block media-custom text-center portrait">
-                        <a href="#"><img src="images/people/alumni/Aaron.jpg" alt="Placeholder"
-                                class="img-fluid-alumni"></a>
-                        <div class="media-body">
-                            <h3 class="mt-0 text-black"> Aaron Ouyang
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ----------------------------------------------------------------------------------------------------------------- -->
             </div>
         </div>
     </div>
+
+    
 
 
     <footer class="site-footer" role="contentinfo">
@@ -648,6 +232,31 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the height of the header image to know when it's fully scrolled past.
+            var headerHeight = document.querySelector('#imageSection').offsetHeight;
+            var logoText = document.getElementById('logoText');
+    
+            window.addEventListener('scroll', function() {
+                // If we've scrolled past the header, change the link colors to black.
+                if (window.scrollY > headerHeight) {
+                    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                        navItem.style.color = 'black';
+                    });
+                    logoText.style.color = 'black';  // Changing the logo color
+                } else {
+                    // Otherwise, keep the link colors as white.
+                    // header.style.backgroundColor = 'rgba(255, 255, 255, 0.7)'
+                    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                        navItem.style.color = 'white';
+                    });
+                    logoText.style.color = 'white';  // Changing the logo color back to white
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

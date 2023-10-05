@@ -28,12 +28,17 @@
 </head>
 
 <body>
-    <header role="banner">
-        <nav class="navbar navbar-expand-lg bg-dark" style="margin-top: 20px;">
+    <header role="banner" class="fixed-header">
+    <!-- <header role="banner"> -->
+        <div class="header-blur">
+            <nav class="navbar navbar-expand-lg bg-dark custom-header">
+            <!-- <nav class="navbar navbar-expand-lg bg-dark"> -->
+        <!-- <nav class="navbar navbar-expand-lg bg-dark" style="margin-top: 20px;"> -->
             <div class="container">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/GradientLogo.png" alt="Logo" style="height: 30px; margin-right: 5px;">
-                    <span style="font-weight: bolder; color: white;">Neurotech</span>@Berkeley
+                    <span id="logoText" style="font-weight: bolder; color: white;">Neurotech@Berkeley</span>
+                    <!-- <span style="font-weight: bolder; color: white;">Neurotech</span>@Berkeley -->
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
                     aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,7 +72,8 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </div>
+</header>
     <!-- END header -->
     <!-- <div class="slider-item overlay" data-stellar-background-ratio="1.0" style="background-image: url('images/background_brain2.jpg'); background-position: center 10%; height: calc(104vh);"> -->
     <!-- <div class="slider-item overlay" data-stellar-background-ratio="1.0" style="background-image: url('https://images.squarespace-cdn.com/content/v1/63b5be50cafb4c5214570cf7/1672858909656-A4F80O3HSTHXEBTGZ91P/unsplash-image-58Z17lnVS4U.jpg'); background-position: center 10%; height: calc(104vh);"> -->
@@ -76,7 +82,7 @@
     <div class="container">
         <div class="row slider-text align-items-center justify-content-center">
             <div class="col-lg-9 text-center col-sm-12 element-animate">
-                <h1 class="mb-4" style="color: rgb(255, 255, 255); opacity: 1.0; z-index: 100;">Neurotech @Berkeley</h1>
+                <h1 class="mb-4" style="color: rgb(255, 255, 255); opacity: 1.0; z-index: 100;">NEUROTECH @BERKELEY</h1>
 
                         <!-- <div class="btn-play-wrap mx-auto">
                 <p class="mb-4"><a href="https://www.youtube.com/watch?v=" data-fancybox data-ratio="2"
@@ -296,8 +302,30 @@
 
     <!-- <script src="particles/particles.min.js"></script>
   <script src="particles/app.js"></script> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the height of the header image to know when it's fully scrolled past.
+        var headerHeight = document.querySelector('.slider-item.overlay').offsetHeight;
+        var logoText = document.getElementById('logoText');
 
-  
+        window.addEventListener('scroll', function() {
+            // If we've scrolled past the header, change the link colors to black.
+            if (window.scrollY > headerHeight) {
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                    navItem.style.color = 'black';
+                });
+                logoText.style.color = 'black';  // Changing the logo color
+            } else {
+                // Otherwise, keep the link colors as white.
+                // header.style.backgroundColor = 'rgba(255, 255, 255, 0.7)'
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                    navItem.style.color = 'white';
+                });
+                logoText.style.color = 'white';  // Changing the logo color back to white
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
