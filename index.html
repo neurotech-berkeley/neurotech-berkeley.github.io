@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="icon" href="images/WhiteLogo.png">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -25,7 +26,104 @@
 
 </head>
 
-<body>
+<script>
+    // stores the device context of the canvas we use to draw the outlines
+    // initialized in myInit, used in myHover and myLeave
+    var hdc;
+    // shorthand func
+    function byId(e){
+        return document.getElementById(e);
+    }
+    function myHover(element){
+        var hoveredElement = element;
+        var coordStr = element.getAttribute('coords');
+
+        // the following instructions draw a circle based on coordStr
+        var mCoords = coordStr.split(',');
+        var centerX, centerY, rad;
+        centerX = mCoords[0];
+        centerY = mCoords[1];
+        rad = mCoords[2];
+        hdc.beginPath();
+        hdc.arc(centerX, centerY, rad, 0, 2 * Math.PI);
+        hdc.stroke();
+
+        // these instructions to display hover text didn't work
+        // var tooltipText = element.getAttribute('title');
+        // var tooltip = document.getElementById('tooltip');
+        // tooltip.innerText = tooltipText;
+        // tooltip.style.display = 'block';
+    }
+    function myLeave(){
+        var canvas = byId('myCanvas');
+        hdc.clearRect(0, 0, canvas.width, canvas.height);
+
+        // these instructions to display hover text didn't work
+        // var tooltip = document.getElementById('tooltip');
+        // tooltip.style.display = 'none';
+    }
+    function myInit(){
+        // get the target image
+        var img = byId('division_map_banner');
+        var x,y, w,h;
+
+        // get it's position and width+height
+        x = img.offsetLeft;
+        y = img.offsetTop;
+        w = img.clientWidth;
+        h = img.clientHeight;
+
+        // move the canvas, so it's contained by the same parent as the image
+        var imgParent = img.parentNode;
+        var can = byId('myCanvas');
+        imgParent.appendChild(can);
+
+        // place the canvas in front of the image
+        can.style.zIndex = 1;
+
+        // position it over the image
+        can.style.left = x+'px';
+        can.style.top = y+'px';
+
+        // make same size as the image
+        can.setAttribute('width', w+'px');
+        can.setAttribute('height', h+'px');
+
+        // get it's context
+        hdc = can.getContext('2d');
+
+        // set the 'default' values for the colour/width of fill/stroke operations
+        hdc.fillStyle = '#19254d';
+        hdc.strokeStyle = '#19254d';
+        hdc.lineWidth = 4;
+    }
+    // $(document).ready(function() {
+    //     $('area').mouseover(function() {
+    //         myHover(this);
+    //     }).mouseout(function() {
+    //         myLeave();
+    //     });
+    // });
+</script>
+
+<style>
+    canvas{
+        pointer-events: none;      /* make the canvas transparent to the mouse - needed since canvas is position infront of image */
+        position: absolute;
+    }
+    .tooltip {
+        position: absolute;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 10px;
+        border: 1px solid #000000;
+        display: none;
+    }
+</style>
+
+<body onload='myInit()'>
+
+    <canvas id='myCanvas'></canvas>     <!-- gets re-positioned in myInit(); -->
 
     <header role="banner">
         <nav class="navbar navbar-expand-lg  bg-dark">
@@ -89,12 +187,14 @@
     </header>
     <!-- END header -->
 
+    <!-- <div class="slider-item overlay" data-stellar-background-ratio="0.5"
+        style="background-image: url('images/braincircuit.jpg'); height: calc(82vh);"> -->
     <div class="slider-item overlay" data-stellar-background-ratio="0.5"
-        style="background-image: url('images/braincircuit.jpg'); height: calc(82vh);">
+        style="background-image: url('images/home_top_banner_nt@b_condensed.png'); height: calc(98vh);">
         <div class="container">
             <div class="row slider-text align-items-center justify-content-center">
                 <div class="col-lg-9 text-center col-sm-12 element-animate">
-                    <h1 class="mb-4">Neurotech @Berkeley</h1>
+                    <!-- <h1 class="mb-4">Neurotech @Berkeley</h1> -->
                     <!-- <div class="btn-play-wrap mx-auto">
             <p class="mb-4"><a href="https://www.youtube.com/watch?v=" data-fancybox data-ratio="2"
                 class="btn-play"><span class="ion ion-ios-play"></span></a></p>
@@ -111,11 +211,15 @@
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <p class="mb-0">
+                        <!--
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSebCKxVWOGNloM7WsWZWsVL8v7-RpLnV0FnzLavKcgOPRyHmw/viewform?usp=sf_link"
                             class="btn btn-outline-white px-4 py-3">Interest Form</a>
 
-
                         <a href="join.html" class="btn btn-outline-white px-4 py-3">Spring 2023 Application Info</a>
+                        -->
+                        <a href="https://tinyurl.com/neurotechappfall2023"
+                        class="btn btn-outline-white px-4 py-3">Fall 2023 Application</a>
+                        <a class="btn btn-outline-white px-4 py-3" href="join.html">Recruitment Info</a>
 
 
                     </p>
@@ -170,6 +274,26 @@
                     <h2 class="mb-4 section-title">Our Divisions</h2>
                 </div>
             </div>
+
+            <!--
+            <div class="row">
+                <img src="images/divisions section.png" alt="Divisions" id="division_map_banner" usemap="#divisions_map" class="center" width="1400px" height="770px">
+
+                 goal is to create an image map, where each circle links to a division 
+                <map name="divisions_map">
+                    <area shape="circle" onmouseover='myHover(this);' onmouseout='myLeave();' coords="308,155,113" alt="Software" title="SOFTWARE: Coding Solutions" href="divisions.html#software">
+                    <area shape="circle" onmouseover='myHover(this);' onmouseout='myLeave();' coords="171,395,113" alt="Devices" title="DEVICES: Building Hardware" href="divisions.html#devices">
+                    <area shape="circle" onmouseover='myHover(this);' onmouseout='myLeave();' coords="312,625,113" alt="Consulting" title="CONSULTING: Collaborations with Industry" href="divisions.html#consulting">
+                    <area shape="circle" onmouseover='myHover(this);' onmouseout='myLeave();' coords="840,154,113" alt="Outreach" title="OUTREACH: Startups, Speakers, Events" href="divisions.html#outreach">
+                    <area shape="circle" onmouseover='myHover(this);' onmouseout='myLeave();' coords="960,401,113" alt="Publications" title="PUBLICATIONS: What's New in Neurotech?" href="divisions.html#publications">
+                    <area shape="circle" onmouseover='myHover(this);' onmouseout='myLeave();' coords="842,625,113" alt="Education" title="EDUCATION: Decal!" href="divisions.html#education">
+                </map>
+                <div id="tooltip" class="tooltip"></div>
+            </div>
+                 <img class="image1" src="images/software_banner.png"> 
+            <br><br><br> --->
+
+            
 
             <div class="row">
                 <div class="col-lg-6">
