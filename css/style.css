@@ -4,8 +4,113 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+ .transparent-black-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
+    padding: 10px 20px; /* 10px top and bottom padding, 20px left and right padding */
+    border-radius: 5px; /* Optional: to give rounded corners */
+    display: inline-block; /* To ensure the box fits the content width */
+}
+
+ #applyHereBtn {
+    background: linear-gradient(223deg, #107178, #3a8da0, #64a9c8, #7ce5ec);
+    background-size: 400% 400%;
+    -webkit-animation: ApplyHereGradient 4s ease infinite;
+    -moz-animation: ApplyHereGradient 4s ease infinite;
+    animation: ApplyHereGradient 4s ease infinite;
+    font-weight: 400;
+}
+.app-btn-bg {
+    background-color: #23c1cc;
+    color: #000;
+    transition: none;
+}
+.nav-btn-highlight {
+    cursor: pointer;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8); /* This adds transparency to your dark background. You can adjust the 0.8 value as needed. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds the drop shadow. You can adjust this as well */
+    transition: all 0.3s; /* smooth transition for changes */
+}
+
+.sticky-top {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* this ensures that the navbar remains on top of other content when scrolling */
+}
+
+/* Styles for the hidden header */
+.header-hidden {
+    top: -100px;  /* This assumes your header's height is 100px. Adjust as needed. */
+    transition: top 0.3s;
+}
+
+/* Styles for the header with white background and black text */
+.header-scrolled {
+    background-color: white !important;  /* Make sure it's not transparent */
+    color: black !important;  /* Change text color to black */
+    top: 0;
+    transition: top 0.3s;
+}
+
+/* Ensure that child elements of the header also adopt the black color */
+.header-scrolled .navbar-dark .navbar-nav .nav-link,
+.header-scrolled .navbar-dark .navbar-brand {
+    color: black;
+}
+
+@keyframes ApplyHereGradient {
+    0% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+
+ .ftco-section.gray-background {
+    background-color: #f8faff !important;
+}
+
+.btn.btn-primary {
+    transition: color 0.15s ease-in-out, 
+                background-color 0.15s ease-in-out, 
+                border-color 0.15s ease-in-out, 
+                box-shadow 0.15s ease-in-out;
+}
+
+.social-logo {
+    width: 44px;  /* You can adjust this value as needed */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+
+.healthtech-logo {
+    width: 80%;  /* or whatever percentage or fixed width you prefer */
+    max-width: 200px;  /* or another value that ensures the logo doesn't get too large */
+    height: auto;  /* maintain the aspect ratio */
+}
+
+.jacob-logo {
+    width: 70%;  /* adjust as needed */
+    max-width: 180px;  /* adjust as needed */
+    height: auto;  /* maintain the aspect ratio */
+}
+
+
  .apply-gradient {
-    background: linear-gradient(to right, #2fd84d, #2fd8e5);
+    background: linear-gradient(to right, #107178, #3a8da0, #64a9c8, #7ce5ec);
     color: #000 !important;
     border-radius: 5px;
     padding: 2px 10px;  /* Adjusting padding to influence the height */
@@ -30,7 +135,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0.5;  /* Adjust this to control the visibility of the gradient image */
+    opacity: 1.0;  /* Adjust this to control the visibility of the gradient image */
     z-index: 1;  /* Places it above the background but below the text content */
 }
 
@@ -4707,6 +4812,8 @@ input[type="button"].btn-block {
 .tab-content>.active {
     display: block;
 }
+
+
 
 .navbar {
     position: relative;
@@ -10687,15 +10794,17 @@ textarea.form-control {
 }
 
 .btn.btn-primary {
-    color: #fff;
+    background-color: #3B9C9C;
+    border-color: #3B9C9C;
+    /* color: #fff; */
     border-width: 2px;
 }
 
 .btn.btn-primary:hover,
 .btn.btn-primary:active,
 .btn.btn-primary:focus {
-    border-color: #3ce0af;
-    background: #3ce0af;
+    border-color: #045F5F;
+    background: #045F5F;
 }
 
 .btn.btn-sm,
@@ -10705,7 +10814,7 @@ textarea.form-control {
 
 .btn.btn-outline-primary {
     border-width: 2px;
-    color: #20c997;
+    color: #045F5F;
 }
 
 .btn.btn-outline-primary:hover,
