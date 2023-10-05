@@ -5,6 +5,22 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+ .slider-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: #000; */
+    opacity: .4;
+} 
+
+ .rounded-box {
+    position: relative;
+    z-index: 1500;
+ }
+
  .text-black {
     color: black !important;
 }
@@ -4921,9 +4937,15 @@ input[type="button"].btn-block {
 }
 
 .navbar-nav .dropdown-menu {
+    background-color: teal; 
+}
+.navbar-nav .dropdown-item:hover {
+    background-color: #006666; 
+}
+/* .navbar-nav .dropdown-menu {
     position: static;
     float: none;
-}
+} */
 
 .navbar-text {
     display: inline-block;
@@ -11254,7 +11276,7 @@ header .search-form .form-control:-moz-placeholder {
 }
 
 .home-slider.home-slider.inner-page .slider-item .slider-text {
-    color: #fff;
+    /* color: #fff; */
     height: calc(50vh - 117px);
     min-height: 550px;
 }
@@ -11340,7 +11362,7 @@ header .search-form .form-control:-moz-placeholder {
 }
 
 .inner-page .slider-item .slider-text {
-    color: #fff;
+    /* color: #fff; */
     height: calc(50vh - 117px);
     min-height: 550px;
 }
@@ -11354,16 +11376,19 @@ header .search-form .form-control:-moz-placeholder {
     position: relative;
 }
 
-.slider-item:before {
+/* look here!! for landing background page!! **** */
+
+/* .slider-item:before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: #000;
-    opacity: .4;
-}
+    bottom: 0; */
+    /* background: #000; problem was here LOL */
+    /* opacity: .4;
+} */
+/* ^^ bring this up! */
 
 .slider-item .slider-text {
     color: #fff;
@@ -11920,10 +11945,10 @@ color: white;
     border-top: 1px solid #f8f9fa;
 }
 
-.element-animate {
+/* .element-animate {
     opacity: 0;
     visibility: hidden;
-}
+} */
 
 .block-41 .block-41-subheading {
     margin-bottom: 30px;

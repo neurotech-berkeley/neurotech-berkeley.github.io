@@ -24,86 +24,112 @@
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        .rounded-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px 50px; 
+            border-radius: 15px; 
+            display: inline-block; 
+            max-width: 70%; 
+        }
+        .custom-longer-image {
+            height: 350px;  
+            width: auto;
+        }
+        .reduced-break br {
+            line-height: 80%; 
+            display: block;
+            content: "";
+            margin-top: 0.55em; 
+        }
+        .bold-heading {
+            font-weight: 700; /* 900 is the maximum font-weight for most fonts, adjust if necessary */
+        }
+        .division-logo {
+            max-width: 50%; 
+            height: auto;
+            display: block;
+            margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
+        }
+        .division-logo-container {
+            background-image: url('images/consulting.png');
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center; 
+            width: 60px; /* adjust as necessary */
+            height: 60px; /* adjust as necessary */
+            display: block;
+            margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
+        }
+        .dropdown-menu {
+            background-color: white !important;
+        }
+
+        .dropdown-item:hover {
+            background-color: teal !important;
+        }
+
+    </style>
+
 </head>
 
 <body>
-
-    <header role="banner">
-        <nav class="navbar navbar-expand-lg  bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand " href="index.html">Neurotech@Berkeley</a>
-
+    <header role="banner" class="fixed-header">
+        <nav class="navbar navbar-expand-lg bg-dark custom-header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/GradientLogo.png" alt="Logo" style="height: 30px; margin-right: 5px;">
+                    <span id="logoText" style="font-weight: bolder; color: white;">Neurotech@Berkeley</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
                     aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-
                 <div class="collapse navbar-collapse" id="navbarsExample05">
                     <ul class="navbar-nav pl-md-5 ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="about.html">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="divisions.html">Divisions</a>
-                            <ul>
-                                <li class="dropdown-item">
-                                    <a href="divisions_software.html">Venture: Software</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_devices.html"> Venture: Devices</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_consulting.html">Consulting</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_outreach.html">Outreach</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_publications.html">Publications</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_education.html">Education</a>
-                                </li>
-                            </ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="divisions.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="divisions_devices.html">Devices</a>
+                                <a class="dropdown-item" href="divisions_education.html">Education</a>
+                                <a class="dropdown-item" href="divisions_publications.html">Publication</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://ucbneurotech.medium.com/">Blog</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="mind.html">MIND</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="join.html">Join</a>
-                        </li>
-                        <li class="nav=item">
+                        <li class="nav-item"> <!-- Note: Corrected the typo 'nav=item' to 'nav-item' -->
                             <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="btn nav-btn-highlight app-btn-bg" href="/join.html" style="color: #000; font-weight: 900; text-transform: none; margin-top: 24px; vertical-align: middle;">Apply</a>
+                        </li>      
                     </ul>
-
                 </div>
             </div>
         </nav>
     </header>
     <!-- END header -->
-
-    <div class="inner-page">
-        <div class="slider-item overlay darken"
-            style="background-image: url('images/old_banner.jpg'); background-color: #0B2041;"
-            data-stellar-background-ratio="0.5">
+<!-- id="imageSection" -->
+    <div class="inner-page" id="imageSection"> 
+        <div class="slider-item overlay darken" style="background-image: url('images/education-industry-panel.jpg'); background-color: #0B2041; height: 104vh; background-position: center center;" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
             <div class="container">
-                <div class="row slider-text align-items-center justify-content-center">
-                    <div class="col-lg-9 text-center col-sm-12 element-animate">
-                        <h1 class="mb-4" style="text-align: center">Education</h1>
-                        <p class="custom-breadcrumbs">Spreading knowledge and passion for neurotech through a
-                            student-led DeCal, Intro to Neurotechnology.</p>
-                        <p class="custom-breadcrumbs"><i>Nurturing neurotech newcomers.</i></p>
+                <div class="row slider-text justify-content-center align-items-center">
+                    <div class="col-md-10 col-sm-12 mb-4 text-center">
+                        <div class="rounded-box">
+                            <h1 class="mb-3 bread" style="color: #ffffff;">Education</h1>
+                            <p class="custom-breadcrumbs">Spreading knowledge and passion for neurotech through a
+                                student-led DeCal, Intro to Neurotechnology.</p>
+                            <p class="custom-breadcrumbs"><i>Nurturing neurotech newcomers.</i></p>                        </div>
                     </div>
                 </div>
-            </div>
+            </div>         
         </div>
     </div>
 
@@ -134,7 +160,6 @@
     <!-- END section -->
 
 
-
     <footer class="site-footer" role="contentinfo">
         <div class="container">
             <div class="row mb-5">
@@ -157,19 +182,19 @@
                             <li class="d-block">
                                 <span class="d-block">Social Media</span>
                                 <a href="https://www.facebook.com/neurotechberkeley/">
-                                    <img src="images\facebookLogo.png" />
+                                    <img src="images\facebookLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://twitter.com/calneurotech">
-                                    <img src="images\twitterLogo.png" />
+                                    <img src="images\twitterLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://github.com/neurotech-berkeley">
-                                    <img src="images\githubLogo.png" />
+                                    <img src="images\githubLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://medium.com/@ucbneurotech">
-                                    <img src="images\mediumLogo.png" />
+                                    <img src="images\mediumLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UC0X69hdu_1U_KBwSxZndswQ/featured">
-                                    <img src="images\youtubeLogo.png" />
+                                    <img src="images\youtube_logo2.png" class="social-logo" />
                                 </a>
                             </li>
                             <li class="d-block">
@@ -178,18 +203,16 @@
                             </li>
                         </ul>
                     </div>
-
-
-                </div>
+                </div>                
                 <div class="col-md-3 mb-5">
                     <h3 class="mb-4">Links</h3>
                     <ul class="list-unstyled footer-link">
-                        <li><a href="index.html">Home</a></li>
+                        <!-- <li><a href="index.html">Home</a></li> -->
                         <li><a href="about.html">About</a></li>
-                        <li><a href="divisions.html">Divisions</a></li>
-                        <li><a href="https://medium.com/@ucbneurotech">Blog</a></li>
-                        <li><a href="mind.html">MIND</a></li>
-                        <li><a href="join.html">Join</a></li>
+                        <!-- <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li> -->
+                        <li><a href="divisions.html">Projects</a></li>
+                        <li><a href="https://medium.com/neurotech-berkeley">Blog</a></li>
+                        <li><a href="join.html">Apply</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -232,6 +255,33 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- <script src="particles/particles.min.js"></script>
+  <script src="particles/app.js"></script> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the height of the header image to know when it's fully scrolled past.
+        var headerHeight = document.querySelector('.slider-item.overlay').offsetHeight;
+        var logoText = document.getElementById('logoText');
+
+        window.addEventListener('scroll', function() {
+            // If we've scrolled past the header, change the link colors to black.
+            if (window.scrollY > headerHeight) {
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                    navItem.style.color = 'black';
+                });
+                logoText.style.color = 'black';  // Changing the logo color
+            } else {
+                // Otherwise, keep the link colors as white.
+                // header.style.backgroundColor = 'rgba(255, 255, 255, 0.7)'
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                    navItem.style.color = 'white';
+                });
+                logoText.style.color = 'white';  // Changing the logo color back to white
+            }
+        });
+    });
+</script>
 </body>
 
 </html>

@@ -23,67 +23,55 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .dropdown-menu {
+            background-color: white !important;
+        }
+
+        .dropdown-item:hover {
+            background-color: teal !important;
+        }
+    </style>
 
 </head>
 
 <body>
-
-    <header role="banner">
-        <nav class="navbar navbar-expand-lg  bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand " href="index.html">Neurotech@Berkeley</a>
-
+    <header role="banner" class="fixed-header">
+        <nav class="navbar navbar-expand-lg bg-dark custom-header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/GradientLogo.png" alt="Logo" style="height: 30px; margin-right: 5px;">
+                    <span id="logoText" style="font-weight: bolder; color: white;">Neurotech@Berkeley</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
                     aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-
                 <div class="collapse navbar-collapse" id="navbarsExample05">
                     <ul class="navbar-nav pl-md-5 ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="about.html">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="divisions.html">Divisions</a>
-                            <!-- <ul>
-                                <li class="dropdown-item">
-                                    <a href="divisions_software.html">Venture: Software</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_devices.html"> Venture: Devices</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_consulting.html">Consulting</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_outreach.html">Outreach</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_publications.html">Publications</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_education.html">Education</a>
-                                </li>
-                            </ul> -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="divisions.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="divisions_devices.html">Devices</a>
+                                <a class="dropdown-item" href="divisions_education.html">Education</a>
+                                <a class="dropdown-item" href="divisions_publications.html">Publication</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://ucbneurotech.medium.com/">Blog</a>
                         </li>
+                        <li class="nav-item"> <!-- Note: Corrected the typo 'nav=item' to 'nav-item' -->
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>  
                         <li class="nav-item">
-                            <a class="nav-link" href="mind.html">MIND</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="join.html">Join</a>
-                        </li>
-                        <li class="nav=item">
-                            <a class="nav-link active" href="contact.html">Contact</a>
-                        </li>
+                            <a class="btn nav-btn-highlight app-btn-bg" href="/join.html" style="color: #000; font-weight: 900; text-transform: none; margin-top: 24px; vertical-align: middle;">Apply</a>
+                        </li>      
                     </ul>
-
                 </div>
             </div>
         </nav>
@@ -92,9 +80,8 @@
 
     <!-- START section -->
     <div class="inner-page">
-        <div class="slider-item overlay darken"
-            style="background-image: url('images/old_banner.jpg'); background-color: #0B2041;"
-            data-stellar-background-ratio="0.5">
+        <div class="slider-item overlay darken" style="background-image: url('images/berkeley_campus.jpeg'); background-color: #0B2041; height: 104vh;" data-stellar-background-ratio="0.5">
+        <!-- <div class="slider-item overlay darken" style="background-image: url('images/old_banner.jpg'); background-color: #0B2041; height: 104vh;" data-stellar-background-ratio="0.5"> -->
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-lg-9 text-center col-sm-12 element-animate">
@@ -121,95 +108,6 @@
 
     <!-- END section -->
 
-    <!-- START section 2 -->
-
-    <div class="section contact-section">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <!--Left Column-->
-                    <!-- Medium -->
-                    <a href="https://medium.com/@ucbneurotech" class="contact-thumb" id="consultingTile">
-                        <div class="work-text">
-                            <h2>Medium</h2>
-                            <p> medium.com/@ucbneurotech </p>
-                        </div>
-                        <img src="images/contact_banners/medium.jpg" alt="Image" class="img-fluid" width="540px"
-                            height="540px">
-                    </a>
-                    <!-- Facebook -->
-                    <a href="https://www.facebook.com/neurotechberkeley/" class="contact-thumb" id="softwareTile">
-                        <div class="work-text">
-                            <h2>Facebook</h2>
-                            <p> facebook.com/neurotechberkeley </p>
-                        </div>
-                        <img src="images/contact_banners/facebook.jpg" alt="Image" class="img-fluid" width="540px"
-                            height="540px">
-                    </a>
-                </div>
-
-                <div class="col-lg-4">
-                    <!--Middle Column-->
-                    <!-- Email -->
-                    <a href="mailto:contact@neurotech.berkeley.edu" class="contact-thumb" id="outreachTile">
-                        <div class="work-text">
-                            <h2>E-mail</h2>
-                            <p>contact@neurotech.berkeley.edu</p>
-                        </div>
-                        <img src="images/contact_banners/email.jpg" alt="Image" class="img-fluid" width="540px"
-                            height="540px">
-                    </a>
-
-                    <!-- Youtube -->
-                    <a href="https://www.youtube.com/channel/UC0X69hdu_1U_KBwSxZndswQ/featured" class="contact-thumb"
-                        id="devicesTile">
-                        <div class="work-text">
-                            <h2>Youtube</h2>
-                            <p> </p>
-                        </div>
-                        <img src="images/contact_banners/youtube.jpg" alt="Image" class="img-fluid" width="540px"
-                            height="540px">
-                    </a>
-                </div>
-
-                <div class="col-lg-4">
-                    <!--Right Column-->
-                    <!-- Github -->
-                    <a href="https://github.com/neurotech-berkeley" class="contact-thumb" id="educationTile">
-                        <div class="work-text">
-                            <h2>Github</h2>
-                            <p>github.com/neurotech-berkeley</p>
-                        </div>
-                        <img src="images/contact_banners/github.jpg" alt="Image" class="img-fluid" width="540px"
-                            height="540px">
-                    </a>
-                    <!-- Twitter -->
-                    <a href="https://twitter.com/calneurotech" class="contact-thumb" id="publicationsTile">
-                        <div class="work-text">
-                            <h2>Twitter</h2>
-                            <p>twitter.com/calneurotech</p>
-                        </div>
-                        <img src="images/contact_banners/twitter.jpg" alt="Image" class="img-fluid" width="540px"
-                            height="540px">
-                    </a>
-
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-12 text-center">
-                    <!-- <p><a href="divisions.html" class="btn btn-outline-white px-4 py-3">All Divisions</a></p> -->
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- END section -->
-
-
-
     <footer class="site-footer" role="contentinfo">
         <div class="container">
             <div class="row mb-5">
@@ -232,19 +130,19 @@
                             <li class="d-block">
                                 <span class="d-block">Social Media</span>
                                 <a href="https://www.facebook.com/neurotechberkeley/">
-                                    <img src="images\facebookLogo.png" />
+                                    <img src="images\facebookLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://twitter.com/calneurotech">
-                                    <img src="images\twitterLogo.png" />
+                                    <img src="images\twitterLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://github.com/neurotech-berkeley">
-                                    <img src="images\githubLogo.png" />
+                                    <img src="images\githubLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://medium.com/@ucbneurotech">
-                                    <img src="images\mediumLogo.png" />
+                                    <img src="images\mediumLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UC0X69hdu_1U_KBwSxZndswQ/featured">
-                                    <img src="images\youtubeLogo.png" />
+                                    <img src="images\youtube_logo2.png" class="social-logo" />
                                 </a>
                             </li>
                             <li class="d-block">
@@ -253,18 +151,16 @@
                             </li>
                         </ul>
                     </div>
-
-
-                </div>
+                </div>                
                 <div class="col-md-3 mb-5">
                     <h3 class="mb-4">Links</h3>
                     <ul class="list-unstyled footer-link">
-                        <li><a href="index.html">Home</a></li>
+                        <!-- <li><a href="index.html">Home</a></li> -->
                         <li><a href="about.html">About</a></li>
-                        <li><a href="divisions.html">Divisions</a></li>
-                        <li><a href="https://medium.com/@ucbneurotech">Blog</a></li>
-                        <li><a href="mind.html">MIND</a></li>
-                        <li><a href="join.html">Join</a></li>
+                        <!-- <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li> -->
+                        <li><a href="divisions.html">Projects</a></li>
+                        <li><a href="https://medium.com/neurotech-berkeley">Blog</a></li>
+                        <li><a href="join.html">Apply</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
