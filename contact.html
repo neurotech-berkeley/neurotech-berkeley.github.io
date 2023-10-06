@@ -24,17 +24,26 @@
         <!-- Theme Style -->
         <link rel="stylesheet" href="css/style.css">
         <style>
-       .nav-item .dropdown-menu .dropdown-item:hover {
-          background-color: #3B9C9C !important;
-      }
-        .dropdown-menu {
-            background-color: white !important;
-        }
+            .transparent-box {
+                background-color: rgba(0, 0, 0, 0.6);  /* Black with 60% opacity */
+                border-radius: 10px;                   /* Rounded corners */
+                padding: 20px;                         /* Padding inside the box */
+                color: white;                          /* White text color */
+                max-width: 80%;                        /* Limit the width */
+                margin: 0 auto;                        /* Center the box */
+            }
 
-        .dropdown-item:hover {
-            background-color: teal !important;
-        }
-    </style>
+            .nav-item .dropdown-menu .dropdown-item:hover {
+                background-color: #3B9C9C !important;
+            }
+            .dropdown-menu {
+                background-color: white !important;
+            }
+
+            .dropdown-item:hover {
+                background-color: teal !important;
+            }
+        </style>
 
 </head>
 
