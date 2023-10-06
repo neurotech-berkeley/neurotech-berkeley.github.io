@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
+       .nav-item .dropdown-menu .dropdown-item:hover {
+          background-color: #3B9C9C !important;
+      }
         .rounded-box {
             background-color: rgba(0, 0, 0, 0.6);
             padding: 50px 50px; 
@@ -96,18 +99,18 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="divisions_devices.html">Devices</a>
-                                <a class="dropdown-item" href="divisions_education.html">Education</a>
                                 <a class="dropdown-item" href="divisions_publications.html">Publication</a>
+                                <a class="dropdown-item" href="divisions_education.html">Education</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://ucbneurotech.medium.com/">Blog</a>
+                            <a class="nav-link" href="https://ucbneurotech.medium.com/"  target = "_blank">Blog</a>
                         </li>
                         <li class="nav-item"> <!-- Note: Corrected the typo 'nav=item' to 'nav-item' -->
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>  
                         <li class="nav-item">
-                            <a class="btn nav-btn-highlight app-btn-bg" href="/join.html" style="color: #000; font-weight: 900; text-transform: none; margin-top: 24px; vertical-align: middle;">Apply</a>
+                            <a class="btn nav-btn-highlight app-btn-bg" href="/join.html" style="color: rgb(255, 255, 255); font-weight: 900; text-transform: none; margin-top: 24px; vertical-align: middle;">Apply</a>
                         </li>      
                     </ul>
                 </div>
@@ -275,9 +278,12 @@
                 // Otherwise, keep the link colors as white.
                 // header.style.backgroundColor = 'rgba(255, 255, 255, 0.7)'
                 document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
-                    navItem.style.color = 'white';
+                    navItem.style.color = 'black';
+                    // navItem.style.color = 'white';
                 });
-                logoText.style.color = 'white';  // Changing the logo color back to white
+                logoText.style.color = 'black';  // Changing the logo color back to white
+
+                // logoText.style.color = 'white';  // Changing the logo color back to white
             }
         });
     });

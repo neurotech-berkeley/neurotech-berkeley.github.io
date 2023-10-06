@@ -78,7 +78,7 @@
     font-weight: 400;
 }
 .app-btn-bg {
-    background-color: #23c1cc;
+    background-color: #3B9C9C;
     color: #000;
     transition: none;
 }
@@ -4825,7 +4825,8 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-    color: #495057;
+    color: #3B9C9C;
+    /* color: #495057; */
     background-color: #fff;
     border-color: #dee2e6 #dee2e6 #fff;
 }
