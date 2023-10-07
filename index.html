@@ -51,7 +51,153 @@
         .nav-item .dropdown-menu .dropdown-item:hover {
             background-color: #3B9C9C !important;
         }
+        .nav-item .dropdown-menu .dropdown-item:hover {
+          background-color: #3B9C9C !important;
+      }
+        .rounded-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px 50px; 
+            border-radius: 15px; 
+            display: inline-block; 
+            max-width: 70%; 
+        }
+        .custom-longer-image {
+            height: 350px;  
+            width: auto;
+        }
+        .reduced-break br {
+            line-height: 80%; 
+            display: block;
+            content: "";
+            margin-top: 0.55em; 
+        }
+        .bold-heading {
+            font-weight: 700; /* 900 is the maximum font-weight for most fonts, adjust if necessary */
+        }
+        .division-logo {
+            max-width: 50%; 
+            height: auto;
+            display: block;
+            margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
+        }
+        .division-logo-container {
+            background-image: url('images/consulting.png');
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center; 
+            width: 60px; /* adjust as necessary */
+            height: 60px; /* adjust as necessary */
+            display: block;
+            margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
+        }
+        /* new */
+        .pb-4, .py-4 {
+            padding-bottom: 1.5rem !important;
+        }
+        .mb-4, .my-4 {
+            margin-bottom: 1.5rem !important;
+        }
+        .justify-content-center {
+            justify-content: center !important;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        .center-cards {
+            justify-content: center;
+        }
+        .project-card-blurb {
+            flex: 0 1 65%;
+            margin: 0.75rem 0.5rem 0.25rem 0.5rem;
+        }
+        .project-card-links {
+            flex: 0 1 15%;
+            margin: 0.25rem 0.5rem 0.5rem 0.5rem;
+        }
+        .mb-3, .my-3 {
+            margin-bottom: 1rem !important;
+        }
+        .block-with-flex {
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: auto;
+            position: relative;
+            display: flex;
+        }
+        /* .ftco-animate {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .fadeInUp {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+
+        .ftco-animated {
+            -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        } */
+        .project-card {
+            background: #fff;
+            -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -moz-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -ms-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -o-box-shadow: 0px 4px 10px -12px #65b9c4;
+            box-shadow: 0px 4px 10px -12px #65b9c4;
+            border: 1px solid #65b9c4;
+            margin: 1rem 0 1rem 0;
+        }
+        /* .project-card {
+            background: #fff;
+            -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -moz-box-shadow: 0px 4px 10px -12px #efac78;
+            -ms-box-shadow: 0px 4px 10px -12px #efac78;
+            -o-box-shadow: 0px 4px 10px -12px #efac78;
+            box-shadow: 0px 4px 10px -12px #efac78;
+            border: 1px solid #fed1ac;
+            margin: 1rem 0 1rem 0;
+        } */
+        .project-card .text {
+            position: relative;
+            border-top: 0;
+            border-radius: 2px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .project-card .text {
+            position: relative;
+            display: block;
+        }
+        .project-card-title {
+            flex: 0 1 25%;
+            margin: 1.5rem 0.5rem 0.75rem 0.5rem;
+        }
+        .justify-content-center {
+            justify-content: center !important;
+        }
+        .dropdown-menu {
+            background-color: white !important;
+        }
+
+        .dropdown-item:hover {
+            background-color: teal !important;
+        }
     </style>
+
 
 </head>
 
@@ -106,7 +252,7 @@
                     <div class="col-md-8 text-center">
                         <h3 style="font-weight: bold; margin-bottom: 50px;">Fall 2023 Recruitment</h3> <!-- Increased margin-bottom to 50px -->
                         <br>
-                        <p style="line-height: 1.5;">Neurotech@Berkeley's Fall 2023 application has <a style="font-weight: bolder;">closed. </a> In the meantime, please fill out our <a href="https://docs.google.com/forms/d/e/1FAIpQLSebCKxVWOGNloM7WsWZWsVL8v7-RpLnV0FnzLavKcgOPRyHmw/viewform?usp=sf_link" target="_blank" style="color: #3db0b0; font-weight: bolder;">interest form</a> and head over to the Join page to learn more about our recruitment timeline, projects, and upcoming info sessions.</p>
+                        <p style="line-height: 1.5;">Neurotech@Berkeley's Fall 2023 application has <a style="font-weight: bolder;">closed. </a> In the meantime, please fill out our <a href="https://docs.google.com/forms/d/e/1FAIpQLSebCKxVWOGNloM7WsWZWsVL8v7-RpLnV0FnzLavKcgOPRyHmw/viewform?usp=sf_link" target="_blank" style="color: #3db0b0; font-weight: bolder;">interest form</a> and check out our Join page to learn more.</p>
                         <br>
                         <a href="None">
                             <img src="https://neurotech.berkeley.edu/images/recruitment/fa23/ntab%20join%20.png" class="img-newsreel" alt="" style="width: 70%; display: block; margin: 0 auto;">
@@ -127,22 +273,160 @@
               <div class="col-md-10 text-center heading-section">
                 <br>
                 <br>
-                <h2 style = "font-weight: bold;">Recent Projects</h2>
-                <p class="mt-4">Every semester, our divion groups collaborate with industry clients and partners as well as tackle interesting projects on our own. Visit our projects page for recent projects and news.</p>
-              </div>
+                <h2 style = "font-weight: bold;">Current Projects</h2>
+                <p class="mt-4">Every semester, our divion groups collaborate with industry clients and partners as well as tackle interesting projects on our own. Visit our <a href="divisions_devices.html" style="text-decoration: underline; font-weight: bold; color: teal;" target="_blank">projects page</a> for recent projects and news.</p>
+            </div>
             </div>
             <div class="row center-cards">
-            </div>
-            <div class="row justify-content-center mb-2 pb-2">
-              <div class="col-md-3 d-block justify-content-center block-with-flex">
-                <p><a href="/divisions_devices.html" class="btn btn-primary btn-lg mt-3 py-3 px-4">See all projects</a></p>
-              </div>
-              <div class="col-md-3 d-block justify-content-center block-with-flex">
-                <p><a href="/contact.html" class="btn btn-primary btn-lg mt-3 py-3 px-4">Collaborate with us</a></p>
-                <br>
-              <br>
-              </div>
-            </div>
+
+                <!-- <script src="current_projects.js"></script>
+
+                <script>
+                    document.getElementById('landing-page-projects').innerHTML += createProjectCard('images/devices-robles-reuben.png', 'RobLES', 'Build and control an external limb using EMG (building off of Neurowrist work)');
+                    document.getElementById('landing-page-projects').innerHTML += createProjectCard('images/devices-pong.png', 'Wetlab', 'Neurons play pong');
+                    // ... add more as needed
+                </script> -->
+
+
+                <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/devices-robles-reuben.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                            RobLES
+                        </p>
+                        <p>
+                          Build and control an external limb using EMG (building off of Neurowrist work)
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                        <div class="meta mb-3">
+                          
+                            <div><a href="https://showspace.so/p/6223?refPageType=company&refPageLabel=Neurotech@Berkeley&refPageSlug=neurotech-berkeley" target="_blank">Insert link here!</a></div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/devices-pong.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                          Wetlab
+                      </p>
+                      <p>
+                        Neurons play pong
+                      </p>
+                      </div>
+                      <div class="text project-card-links">
+                        <div class="meta mb-3">
+                          
+                            <div><a href="https://showspace.so/p/6223?refPageType=company&refPageLabel=Neurotech@Berkeley&refPageSlug=neurotech-berkeley" target="_blank">Insert link here!</a></div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/devices-neuromorph.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                          Neuromorph
+                        </p>
+                        <p>
+                          Design and build a flexible EEG that is affordable and enables user-defined electrode position and count
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                        <div class="meta mb-3">
+                          
+                            <div><a href="https://showspace.so/p/6223?refPageType=company&refPageLabel=Neurotech@Berkeley&refPageSlug=neurotech-berkeley" target="_blank">Insert link here!</a></div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/devices-mlsad.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p>
+                            [ML-SAD]
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                        <div class="meta mb-3">
+                          
+                            <div><a href="https://showspace.so/p/6223?refPageType=company&refPageLabel=Neurotech@Berkeley&refPageSlug=neurotech-berkeley" target="_blank">Insert link here!</a></div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/devices-ssvep.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p>
+                            [SSVEP]
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                        <div class="meta mb-3">
+                          
+                            <div><a href="https://showspace.so/p/6223?refPageType=company&refPageLabel=Neurotech@Berkeley&refPageSlug=neurotech-berkeley" target="_blank">Insert link here!</a></div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/devices-p300.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p>
+                            [P300]
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                        <div class="meta mb-3">
+                          
+                            <div><a href="https://showspace.so/p/6223?refPageType=company&refPageLabel=Neurotech@Berkeley&refPageSlug=neurotech-berkeley" target="_blank">Insert link here!</a></div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+                    </div>
+                    </div>
+                  </div>
+                  <br><br><br>
+              </section>
+
+
           </div>
         </div>
       </section>
@@ -154,8 +438,8 @@
             <div class="col-md-10 text-center heading-section ftco-animate fadeInUp ftco-animated">
                 <br>
                 <br>
-              <h2 style = "font-weight: bold;">Our Partners</h2>
-              <p class="mt-4">Thank you to our sponsors for helping us make what we do possible.</p>
+              <h2 style = "font-weight: bold;">Community Partners</h2>
+              <p class="mt-4">Thank you to our sponsors!</p>
             </div>
           </div>
           <div class="row justify-content-center align-items-center">
