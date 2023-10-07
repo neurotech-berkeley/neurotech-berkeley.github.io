@@ -239,19 +239,19 @@
                             <li class="d-block">
                                 <span class="d-block">Social Media</span>
                                 <a href="https://www.facebook.com/neurotechberkeley/">
-                                    <img src="images\facebookLogo.png" />
+                                    <img src="images\facebookLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://twitter.com/calneurotech">
-                                    <img src="images\twitterLogo.png" />
+                                    <img src="images\twitterLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://github.com/neurotech-berkeley">
-                                    <img src="images\githubLogo.png" />
+                                    <img src="images\githubLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://medium.com/@ucbneurotech">
-                                    <img src="images\mediumLogo.png" />
+                                    <img src="images\mediumLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UC0X69hdu_1U_KBwSxZndswQ/featured">
-                                    <img src="images\youtubeLogo.png" />
+                                    <img src="images\youtube_logo2.png" class="social-logo" />
                                 </a>
                             </li>
                             <li class="d-block">
@@ -260,18 +260,16 @@
                             </li>
                         </ul>
                     </div>
-
-
-                </div>
+                </div>                
                 <div class="col-md-3 mb-5">
                     <h3 class="mb-4">Links</h3>
                     <ul class="list-unstyled footer-link">
-                        <li><a href="index.html">Home</a></li>
+                        <!-- <li><a href="index.html">Home</a></li> -->
                         <li><a href="about.html">About</a></li>
-                        <li><a href="divisions.html">Divisions</a></li>
-                        <li><a href="https://medium.com/@ucbneurotech">Blog</a></li>
-                        <li><a href="mind.html">MIND</a></li>
-                        <li><a href="join.html">Join</a></li>
+                        <!-- <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li> -->
+                        <li><a href="divisions.html">Projects</a></li>
+                        <li><a href="https://medium.com/neurotech-berkeley">Blog</a></li>
+                        <li><a href="join.html">Apply</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -314,6 +312,37 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- <script src="particles/particles.min.js"></script>
+  <script src="particles/app.js"></script> -->
+  <script>
+    $(function() {
+    $("#header-placeholder").load("header.html", function() {
+        attachScrollListener();
+    });
+});
+
+function attachScrollListener() {
+    var headerHeight = document.querySelector('#imageSection').offsetHeight;
+    var logoText = document.getElementById('logoText');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > headerHeight) {
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                navItem.style.color = 'black';
+            });
+            logoText.style.color = 'black';
+        } else {
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                navItem.style.color = 'white';
+            });
+            logoText.style.color = 'white';
+        }
+    });
+}
+
+</script>
+
 </body>
 
 </html>

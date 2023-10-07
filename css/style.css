@@ -5,6 +5,17 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+ @font-face {
+    font-family: 'Righteous';
+    src: url('fonts/righteous.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+#logoText {
+    font-family: 'Righteous', sans-serif;
+}
+
  .slider-item:before {
     content: "";
     position: absolute;
