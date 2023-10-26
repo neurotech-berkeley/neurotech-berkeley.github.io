@@ -136,12 +136,15 @@
             display: flex;
         }
         .project-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
             background: #fff;
-            -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
+            /* -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
             -moz-box-shadow: 0px 4px 10px -12px #65b9c4;
             -ms-box-shadow: 0px 4px 10px -12px #65b9c4;
-            -o-box-shadow: 0px 4px 10px -12px #65b9c4;
-            box-shadow: 0px 4px 10px -12px #65b9c4;
+            -o-box-shadow: 0px 4px 10px -12px #65b9c4; */
+            /* box-shadow: 0px 4px 10px -12px #65b9c4; */
             border: 1px solid #65b9c4;
             margin: 1rem 0 1rem 0;
         }
@@ -244,7 +247,11 @@
         <!-- END header -->
         <!-- <div class="slider-item overlay" data-stellar-background-ratio="1.0" style="background-image: url('images/background_brain2.jpg'); background-position: center 10%; height: calc(104vh);"> -->
         <!-- <div class="slider-item overlay" data-stellar-background-ratio="1.0" style="background-image: url('https://images.squarespace-cdn.com/content/v1/63b5be50cafb4c5214570cf7/1672858909656-A4F80O3HSTHXEBTGZ91P/unsplash-image-58Z17lnVS4U.jpg'); background-position: center 10%; height: calc(104vh);"> -->
-        <div class="slider-item overlay" id = "imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/brain_background.png'); background-position: center top; height: calc(124vh);">
+        <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+        <!-- <div class="slider-item overlay" id="imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/bluebrain.jpg'); background-position: center 50px; height: calc(100vh); position: relative; z-index: 2;"> -->
+        <div class="slider-item overlay" id="imageSection" style="background-image: url('images/bluebrain.jpg'); background-position: center 0px; height: calc(120vh); position: relative; z-index: 2;">
+
+        <!-- <div class="slider-item overlay" id = "imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/brain_background.png'); background-position: center top; height: calc(124vh);"> -->
         <!-- <div class="slider-item bread-wrap" style="will-change: scroll-position; overflow-y: auto; height: 100%; background-image: url('images/green_gradient.png'); opacity: 1.0; transform: translate3d(0px, 0px, 0px); position: absolute; top: 0; right: 0; bottom: 0; left: 0;" data-depth="-1.0" data-type="parallax"></div> -->
         <div class="container">
             <div class="row slider-text align-items-center justify-content-center">
@@ -271,7 +278,7 @@
           <div class="row justify-content-center mb-2 pb-2">
           </div>
           <div class="row justify-content-center mb-2 pb-2">
-            <p><a href="/about.html" class="btn btn-primary mt-3 py-3 px-4">Learn More</a></p>
+            <p><a href="about.html" class="btn btn-primary mt-3 py-3 px-4">Learn More</a></p>
           </div>
         </div>
       </section>
@@ -355,10 +362,10 @@
                     </div>
                       <div class="text project-card-blurb">
                         <p style = "font-weight: 900; color: black; font-size: 1.1em;">
-                          Wetlab
+                          Wetware Computing
                       </p>
                       <p>
-                        Neurons play pong
+                        Bridging the gap between silicon and biology - the first collegiate initiative to compute and understand live neural circuits!
                       </p>
                       </div>
                       <div class="text project-card-links">
@@ -469,6 +476,9 @@
       </section>
 
     <!-- Adding the "Sponsors" section -->
+    
+
+    
     <section class="ftco-section testimony-section">
         <div class="container">
           <div class="row justify-content-center mb-4 pb-4">
@@ -631,6 +641,7 @@ function attachScrollListener() {
 
 
 </script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 </body>
 
