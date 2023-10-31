@@ -25,6 +25,36 @@
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
     <style>
+
+    #imageSection {
+        position: relative;
+        height: 100vh; /* set the height to 100vh or any other value as needed */
+    }
+
+    #imageSection::before {
+        content: "";
+        background-image: url('images/wallpaper-darkblue-2.jpg');
+        filter: blur(5px); /* Adjust blur value as needed */
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1; /* Keep it behind the content */
+        background-position: center; 
+        background-size: cover;
+    }
+
+
+        @media (max-width: 768px) {
+            h1 {
+                color: white !important;
+            }
+            .custom-paragraph-style {
+                font-size: 16px; /* Adjust as needed */
+            }
+        }
+
         @font-face {
             font-family: 'Righteous';
             src: url('fonts/righteous.ttf') format('truetype');
@@ -249,9 +279,10 @@
         <!-- <div class="slider-item overlay" data-stellar-background-ratio="1.0" style="background-image: url('https://images.squarespace-cdn.com/content/v1/63b5be50cafb4c5214570cf7/1672858909656-A4F80O3HSTHXEBTGZ91P/unsplash-image-58Z17lnVS4U.jpg'); background-position: center 10%; height: calc(104vh);"> -->
         <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
         <!-- <div class="slider-item overlay" id="imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/bluebrain.jpg'); background-position: center 50px; height: calc(100vh); position: relative; z-index: 2;"> -->
-        <div class="slider-item overlay" id="imageSection" style="background-image: url('images/bluebrain.jpg'); background-position: center 0px; height: calc(120vh); position: relative; z-index: 2;">
+        <!-- <div class="slider-item overlay" id="imageSection" style="background-image: url('images/black-brain.jpeg'); background-position: center 0px; height: calc(100vh); position: relative; z-index: 2;"> -->
+            <div class="slider-item overlay" id="imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/wallpaper-darkblue-2.jpg'); background-position: center; background-size: cover; height: 124vh; backdrop-filter: blur(1px);">
 
-        <!-- <div class="slider-item overlay" id = "imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/brain_background.png'); background-position: center top; height: calc(124vh);"> -->
+        <!-- <div class="slider-item overlay" id = "imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/wallpaper-darkblue-2.jpg'); background-position: center; height: calc(104vh);"> -->
         <!-- <div class="slider-item bread-wrap" style="will-change: scroll-position; overflow-y: auto; height: 100%; background-image: url('images/green_gradient.png'); opacity: 1.0; transform: translate3d(0px, 0px, 0px); position: absolute; top: 0; right: 0; bottom: 0; left: 0;" data-depth="-1.0" data-type="parallax"></div> -->
         <div class="container">
             <div class="row slider-text align-items-center justify-content-center">
@@ -565,7 +596,7 @@
                         <!-- <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li> -->
                         <li><a href="divisions.html">Projects</a></li>
                         <li><a href="https://medium.com/neurotech-berkeley">Blog</a></li>
-                        <li><a href="join.html">Apply</a></li>
+                        <li><a href="https://airtable.com/appI4wgEIqTdUCD43/shr4o8TYyoiHmZvN5">Apply</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>

@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
 
-
     <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
@@ -25,6 +24,12 @@
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
     <style>
+        @media (max-width: 768px) {
+            #logoText {
+                color: white !important;
+            }
+        }
+
         @font-face {
             font-family: 'Righteous';
             src: url('fonts/righteous.ttf') format('truetype');
@@ -88,9 +93,14 @@
             background-color: teal !important;
         }
 
-        .navbar-brand #logoText {
+        /* .navbar-brand #logoText {
             color: black !important;
+        } */
+
+        #logoText {
+            color: black;
         }
+
 
         .navbar-nav .nav-link {
             color: black !important;
@@ -161,7 +171,7 @@
                 <div class="container">
                     <a class="navbar-brand" href="index.html">
                         <img src="images/GradientLogo.png" alt="Logo" style="height: 30px; margin-right: 5px;">
-                        <span id="logoText" style="color: white;">Neurotech@Berkeley</span>
+                        <span id="logoText" style="color: black;">Neurotech@Berkeley</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
                         aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
