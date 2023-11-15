@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
+    <!-- <title>Neurotech@Berkeley</title> -->
     <title>Neurotech@Berkeley</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" href="images/WhiteLogo.png">
+    <link rel="icon" href="images/GradientLogo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
@@ -23,378 +24,616 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        #imageSection {
+    position: relative;
+    height: 124vh; /* Adjust as needed */
+    background-image: url('images/backgroundFinal.png');
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(1px);
+}
 
-</head>
+#imageSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(5, 88, 105, 0.8); /* Teal color with transparency */
+    z-index: -1;
+}
 
-<script>
-    // stores the device context of the canvas we use to draw the outlines
-    // initialized in myInit, used in myHover and myLeave
-    var hdc;
-    // shorthand func
-    function byId(e){
-        return document.getElementById(e);
+        @media (max-width: 768px) {
+            .navbar.navbar-expand-lg {
+                background-color: transparent !important;
+            }
+            .slider-text {
+                margin-top: 120px; /* Adjust this value as needed */
+            }
+            h1 {
+                color: white !important;
+            }
+            .custom-paragraph-style {
+                font-size: 16px; /* Adjust as needed */
+            }
+        }
+
+        @font-face {
+            font-family: 'Righteous';
+            src: url('fonts/righteous.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #logoText,
+        .navbar-brand,
+        .nav-link,
+        .nav-btn-highlight,
+        .dropdown-toggle,
+        .dropdown-item,
+        h1 {
+            font-family: 'Righteous', sans-serif;
+        }
+        .dropdown-menu {
+            background-color: white !important;
+        }
+
+        .dropdown-item:hover {
+            background-color: teal !important;
+        }
+        .nav-item .dropdown-menu .dropdown-item:hover {
+            background-color: #3B9C9C !important;
+        }
+        .nav-item .dropdown-menu .dropdown-item:hover {
+          background-color: #3B9C9C !important;
+      }
+        .rounded-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px 50px; 
+            border-radius: 15px; 
+            display: inline-block; 
+            max-width: 70%; 
+        }
+        
+        .custom-longer-image {
+            height: 350px;  
+            width: auto;
+        }
+        .reduced-break br {
+            line-height: 80%; 
+            display: block;
+            content: "";
+            margin-top: 0.55em; 
+        }
+        .bold-heading {
+            font-weight: 700; /* 900 is the maximum font-weight for most fonts, adjust if necessary */
+        }
+        .division-logo {
+            max-width: 50%; 
+            height: auto;
+            display: block;
+            margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
+        }
+        .division-logo-container {
+            background-image: url('images/consulting.png');
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center; 
+            width: 60px; /* adjust as necessary */
+            height: 60px; /* adjust as necessary */
+            display: block;
+            margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
+        }
+        /* new */
+        .pb-4, .py-4 {
+            padding-bottom: 1.5rem !important;
+        }
+        .mb-4, .my-4 {
+            margin-bottom: 1.5rem !important;
+        }
+        .justify-content-center {
+            justify-content: center !important;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        .center-cards {
+            justify-content: center;
+        }
+        .project-card-blurb p:first-child {
+            background-color: #f0f0f0; /* Lighter gray background */
+            padding: 5px 10px; /* Padding around the text */
+            border-radius: 10px; /* More rounded corners */
+            display: inline-block; /* To fit the size of the content */
+        }
+        .project-card-links {
+            flex: 0 1 15%;
+            margin: 0.25rem 0.5rem 0.5rem 0.5rem;
+        }
+        .mb-3, .my-3 {
+            margin-bottom: 1rem !important;
+        }
+        .block-with-flex {
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: auto;
+            position: relative;
+            display: flex;
+        }
+        .project-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            background: #fff;
+            border: 1px solid #65b9c4;
+            margin: 1rem 0 1rem 0;
+            padding: 20px; /* Increased padding inside the card */
+        }
+        .project-card .text {
+            position: relative;
+            border-top: 0;
+            border-radius: 2px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .project-card .text {
+            position: relative;
+            display: block;
+        }
+        .project-card-title {
+            flex: 0 1 25%;
+            margin: 1.5rem 0.5rem 0.75rem 0.5rem;
+        }
+        .justify-content-center {
+            justify-content: center !important;
+        }
+        .dropdown-menu {
+            background-color: white !important;
+        }
+
+        .dropdown-item:hover {
+            background-color: teal !important;
+        }
+        .custom-text-style {
+            line-height: 1.5;
+            font-weight: bold;
+        }
+        .image-container {
+            position: relative;
+            text-align: right; /* Aligns the container to the right */
+            height: 300px; /* Adjust based on your image size */
+            width: 300px; /* Ensure there's enough width */
+            margin-right: auto; /* This will push the container to the right */
+            margin-left: 150px; /* Adjust this to create space from the left side (or from the title) */
+            margin-top: -50px; /* New line added - adjust this value to move the images up */
+        }
+
+#overlapLogo2, #circularTexts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 200px; /* Adjust as needed */
+}
+
+#overlapLogo2 {
+    z-index: 2; /* Ensures the logo is above the rotating text */
+}
+
+#circularTexts {
+    width: 450px; /* Adjusted to double the original assumed size */
+    animation: rotate 40s infinite linear;
+    z-index: 1; /* Ensures the text is below the logo */
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
     }
-    function myHover(element){
-        var hoveredElement = element;
-        var coordStr = element.getAttribute('coords');
-
-        // the following instructions draw a circle based on coordStr
-        var mCoords = coordStr.split(',');
-        var centerX, centerY, rad;
-        centerX = mCoords[0];
-        centerY = mCoords[1];
-        rad = mCoords[2];
-        hdc.beginPath();
-        hdc.arc(centerX, centerY, rad, 0, 2 * Math.PI);
-        hdc.stroke();
-
-        // these instructions to display hover text didn't work
-        // var tooltipText = element.getAttribute('title');
-        // var tooltip = document.getElementById('tooltip');
-        // tooltip.innerText = tooltipText;
-        // tooltip.style.display = 'block';
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
     }
-    function myLeave(){
-        var canvas = byId('myCanvas');
-        hdc.clearRect(0, 0, canvas.width, canvas.height);
+}
 
-        // these instructions to display hover text didn't work
-        // var tooltip = document.getElementById('tooltip');
-        // tooltip.style.display = 'none';
+
+
+
+        @media (max-width: 768px) {
+            p {
+                line-height: 1.5;
+            }
+            
+        }
+
+        /* media format responsive: */
+        @media (max-width: 768px) {
+                .transparent-box {
+                    max-width: 90%;
+                    margin: 20px 5%;
+                }
+            }
+        @media (max-width: 768px) {
+            .footer-link {
+                text-align: center;
+            }
+        }
+        /* Base style for large screens */
+.col-lg-6.text-left.col-sm-12 {
+    text-align: left; /* Keep it left aligned */
+    padding-left: 5%; /* Adjust this value as needed */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .col-lg-6.text-left.col-sm-12 {
+        text-align: center; /* Center-align on smaller screens */
+        padding-left: 0; /* Remove padding on smaller screens */
     }
-    function myInit(){
-        // get the target image
-        var img = byId('division_map_banner');
-        var x,y, w,h;
+}
 
-        // get it's position and width+height
-        x = img.offsetLeft;
-        y = img.offsetTop;
-        w = img.clientWidth;
-        h = img.clientHeight;
 
-        // move the canvas, so it's contained by the same parent as the image
-        var imgParent = img.parentNode;
-        var can = byId('myCanvas');
-        imgParent.appendChild(can);
 
-        // place the canvas in front of the image
-        can.style.zIndex = 1;
-
-        // position it over the image
-        can.style.left = x+'px';
-        can.style.top = y+'px';
-
-        // make same size as the image
-        can.setAttribute('width', w+'px');
-        can.setAttribute('height', h+'px');
-
-        // get it's context
-        hdc = can.getContext('2d');
-
-        // set the 'default' values for the colour/width of fill/stroke operations
-        hdc.fillStyle = '#19254d';
-        hdc.strokeStyle = '#19254d';
-        hdc.lineWidth = 4;
+@media (max-width: 768px) {
+    /* Centering title and subtitle */
+    .col-lg-6.text-left.col-sm-12 h1,
+    .col-lg-6.text-left.col-sm-12 p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
-    // $(document).ready(function() {
-    //     $('area').mouseover(function() {
-    //         myHover(this);
-    //     }).mouseout(function() {
-    //         myLeave();
-    //     });
-    // });
-</script>
 
-<style>
-    canvas{
-        pointer-events: none;      /* make the canvas transparent to the mouse - needed since canvas is position infront of image */
-        position: absolute;
-    }
-    .tooltip {
-        position: absolute;
-        background-color: #ffffff;
-        color: #000000;
-        padding: 10px;
-        border: 1px solid #000000;
+    /* Hiding overlapping images */
+    .image-container img {
         display: none;
     }
-</style>
+}
 
-<body onload='myInit()'>
+        @media (max-width: 768px) {
+            .navbar-brand #logoText {
+                font-size: 15px !important; 
+            }
+        }
 
-    <canvas id='myCanvas'></canvas>     <!-- gets re-positioned in myInit(); -->
+        @media (max-width: 768px) {
+            .navbar.navbar-expand-lg.bg-dark.custom-header {
+                background-color: rgba(0, 0, 0, 0.8) !important;
+            }
+        }
+        /* moblie version for navigation: */
+        .navbar-toggler-icon {
+            display: inline-block;
+            width: 22px;
+            height: 2px;
+            background-color: white;
+            position: relative;
+        }
 
-    <header role="banner">
-        <nav class="navbar navbar-expand-lg  bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand " href="index.html">Neurotech@Berkeley</a>
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: "";
+            background-color: white;
+            display: block;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s;
+        }
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
-                    aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        .navbar-toggler-icon::before {
+            top: -7px;
+        }
 
+        .navbar-toggler-icon::after {
+            bottom: -7px;
+        }
+    </style>
+</head>
 
-                <div class="collapse navbar-collapse" id="navbarsExample05">
-                    <ul class="navbar-nav pl-md-5 ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="divisions.html">Divisions</a>
-                            <!-- <ul>
-                                <li class="dropdown-item">
-                                    <a href="divisions_software.html">Venture: Software</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_devices.html"> Venture: Devices</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_consulting.html">Consulting</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_outreach.html">Outreach</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_publications.html">Publications</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_education.html">Education</a>
-                                </li>
-                            </ul> -->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://ucbneurotech.medium.com/">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="mind.html">MIND</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="join.html">Join</a>
-                        </li>
-                        <li class="nav=item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
+<body>
+    <div id="header-placeholder"></div>
 
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- END header -->
+        <!-- END header -->
+        <!-- <div class="slider-item overlay" data-stellar-background-ratio="1.0" style="background-image: url('images/background_brain2.jpg'); background-position: center 10%; height: calc(104vh);"> -->
+        <!-- <div class="slider-item overlay" data-stellar-background-ratio="1.0" style="background-image: url('https://images.squarespace-cdn.com/content/v1/63b5be50cafb4c5214570cf7/1672858909656-A4F80O3HSTHXEBTGZ91P/unsplash-image-58Z17lnVS4U.jpg'); background-position: center 10%; height: calc(104vh);"> -->
+        <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+        <!-- <div class="slider-item overlay" id="imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/bluebrain.jpg'); background-position: center 50px; height: calc(100vh); position: relative; z-index: 2;"> -->
+        <!-- <div class="slider-item overlay" id="imageSection" style="background-image: url('images/black-brain.jpeg'); background-position: center 0px; height: calc(100vh); position: relative; z-index: 2;"> -->
+            <div class="slider-item overlay" id="imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/backgroundFinal.png'); background-position: center; background-size: cover; height: 124vh; backdrop-filter: blur(3px);">
 
-    <!-- <div class="slider-item overlay" data-stellar-background-ratio="0.5"
-        style="background-image: url('images/braincircuit.jpg'); height: calc(82vh);"> -->
-    <div class="slider-item overlay" data-stellar-background-ratio="0.5"
-        style="background-image: url('images/home_top_banner_nt@b_condensed.png'); height: calc(98vh);">
+        <!-- <div class="slider-item overlay" id = "imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/wallpaper-darkblue-2.jpg'); background-position: center; height: calc(104vh);"> -->
+        <!-- <div class="slider-item bread-wrap" style="will-change: scroll-position; overflow-y: auto; height: 100%; background-image: url('images/green_gradient.png'); opacity: 1.0; transform: translate3d(0px, 0px, 0px); position: absolute; top: 0; right: 0; bottom: 0; left: 0;" data-depth="-1.0" data-type="parallax"></div> -->
         <div class="container">
-            <div class="row slider-text align-items-center justify-content-center">
-                <div class="col-lg-9 text-center col-sm-12 element-animate">
-                    <!-- <h1 class="mb-4">Neurotech @Berkeley</h1> -->
-                    <!-- <div class="btn-play-wrap mx-auto">
-            <p class="mb-4"><a href="https://www.youtube.com/watch?v=" data-fancybox data-ratio="2"
-                class="btn-play"><span class="ion ion-ios-play"></span></a></p>
-          </div>
-          <span>Welcome</span> -->
+            <div class="row slider-text align-items-center justify-content-start">
+                <div class="col-lg-6 text-left col-sm-12">
+                    <h1 class="mb-4" style="color: #ffffff;">NEUROTECH @BERKELEY.</h1>
+                    <p style="color: #ffffff;">UC Berkeley's student-run community for researching and facilitating advancements in the field of neurotechnology.</p>
                 </div>
-            </div>
-        </div>
-    </div>
 
-
-    <div class="bg-primary py-5 apply-here">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <p class="mb-0">
-                        <!--
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSebCKxVWOGNloM7WsWZWsVL8v7-RpLnV0FnzLavKcgOPRyHmw/viewform?usp=sf_link"
-                            class="btn btn-outline-white px-4 py-3">Interest Form</a>
-
-                        <a href="join.html" class="btn btn-outline-white px-4 py-3">Spring 2023 Application Info</a>
-                        -->
-                        <a href="https://tinyurl.com/neurotechappfall2023"
-                        class="btn btn-outline-white px-4 py-3">Fall 2023 Application</a>
-                        <a class="btn btn-outline-white px-4 py-3" href="join.html">Recruitment Info</a>
-
-
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="section section-info">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 mr-auto mb-5">
-                    <!--
-                        <span class="d-block text-uppercase text-secondary">Who We Are</span>
-                    <span class="divider my-4"></span>
-                    <h2 class="mb-4 section-title desktop-view"> <strong>Neurotech@Berkeley</strong></h2>
-                    -->
-                    <div class="mobile-view">
-
+                <div class="col-lg-6 text-right">
+                    <div class="image-container">
+                        <img src="images/logotext-white.png" alt="Circular Texts" id="circularTexts">
+                        <!-- circularNtab -->
+                        <img src="images/overlapLogo2.png" alt="Overlap Logo" id="overlapLogo2">
                     </div>
-
-                    <p>Neurotech@Berkeley serves as a hub for discussing the myriad technologies used in research and
-                        industry to collect, analyze, and utilize signals from the brain. As a student organization, we
-                        focus on non-invasive techniques such as
-                        EEG, TMS, and fMRI. Through meetings, workshops, and events, we aim to educate the wider
-                        community about the challenges and benefits of biosensing and neurotechnology. </p>
-                    <p class="mb-5">We further aim to be the central repository for biosensing hardware at UC Berkeley,
-                        providing access to devices for students to use for class, hackathons, or other projects.</p>
-                    <!-- <p><a href="#" class="btn btn-outline-black">Learn More</a></p> -->
                 </div>
-                <div class="col-lg-5">
-                    <!--We need to put a different image here. We could put a bear with an eeg on it.-->
-                    <img src="images/Bear graphic 1.png" alt="Image" class="img-fluid">
-                    <!--
-                    <figure class="img-dotted-bg">
-                        
-                    </figure>
-                    -->
+                
 
-                </div>
             </div>
-        </div>
+        </div>        
     </div>
 
-    <div class="section portfolio-section">
+
+    <section class="ftco-section white-background" id="section-counter">
+        <div class="container" style="padding: 94px;">
+          <div class="row justify-content-center mb-4 pb-4">
+            <div class="col-md-10 text-center heading-section">
+                <h5 class="custom-paragraph-style custom-text-style">Neurotech@Berkeley focuses on researching non-invasive techniques such 
+                as EEG, TMS, and fMRI. Through meetings, workshops, and events, we aim to educate 
+                the wider community about the challenges and benefits of biosensing and 
+                neurotechnology. </h5>
+            </div>
+          </div>
+          <div class="row justify-content-center mb-2 pb-2">
+          </div>
+          <div class="row justify-content-center mb-2 pb-2">
+            <p><a href="about.html" class="btn btn-primary mt-3 py-3 px-4">Learn More</a></p>
+          </div>
+        </div>
+      </section>
+
+        <!-- Upcoming Eventssss -->
+        <section class="ftco-section testimony-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5 pb-5">
+                    <div class="col-md-7 text-center heading-section">
+                        <h2 style="font-weight: bolder;">Upcoming Events</h2>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <h3 style="font-weight: bold; margin-bottom: 50px;">Fall 2023 Recruitment</h3> <!-- Increased margin-bottom to 50px -->
+                        <br>
+                        <p style="line-height: 1.5;">Neurotech@Berkeley's Fall 2023 application has <a style="font-weight: bolder;">closed. </a> In the meantime, please fill out our <a href="https://docs.google.com/forms/d/e/1FAIpQLSebCKxVWOGNloM7WsWZWsVL8v7-RpLnV0FnzLavKcgOPRyHmw/viewform?usp=sf_link" target="_blank" style="color: #3db0b0; font-weight: bolder;">interest form</a> and check out our Join page to learn more.</p>
+                        <br>
+                        <a href="None">
+                            <img src="https://neurotech.berkeley.edu/images/recruitment/fa23/ntab%20join%20.png" class="img-newsreel" alt="" style="width: 70%; display: block; margin: 0 auto;">
+                        </a>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Adding the "Recent Projects" section -->
+    <section class="ftco-section gray-background">
+        <div class="container"> 
+          <div id="landing-page-projects">
+            <div class="row justify-content-center mb-4 pb-4">
+              <div class="col-md-10 text-center heading-section">
+                <br>
+                <br>
+                <h2 style = "font-weight: bold;">Current Software & Devices Projects</h2>
+                <p class="mt-4">Every semester, our divion groups collaborate with industry clients and partners as well as tackle interesting projects on our own. Visit our <a href="divisions_devices.html" style="text-decoration: underline; font-weight: bold; color: teal;" target="_blank">projects page</a> for recent projects and news.</p>
+            </div>
+            </div>
+            <div class="row center-cards">
+
+                <!-- <script src="current_projects.js"></script>
+
+                <script>
+                    document.getElementById('landing-page-projects').innerHTML += createProjectCard('images/devices-robles-reuben.png', 'RobLES', 'Build and control an external limb using EMG (building off of Neurowrist work)');
+                    document.getElementById('landing-page-projects').innerHTML += createProjectCard('images/devices-pong.png', 'Wetlab', 'Neurons play pong');
+                    // ... add more as needed
+                </script> -->
+
+
+                <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/devices-robles-reuben.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                            RobLES
+                        </p>
+                        <p>
+                          Build and control an external limb using EMG (building off of Neurowrist work)
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                        <div class="meta mb-3">
+                          
+                          <div style="color: palevioletred;">[Coming soon]</div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/devices-pong.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                          Wetware Computing
+                      </p>
+                      <p>
+                        Bridging the gap between silicon and biology - the first collegiate initiative to compute and understand live neural circuits!
+                      </p>
+                      </div>
+                      <div class="text project-card-links">
+                        <div class="meta mb-3">
+                          
+                          <div style="color: palevioletred;">[Coming soon]</div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/devices-neuromorph.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                          Neuromorph
+                        </p>
+                        <p>
+                          Design and build a flexible EEG that is affordable and enables user-defined electrode position and count
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                        <div class="meta mb-3">
+                          
+                          <div style="color: palevioletred;">[Coming soon]</div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/devices-mlsad.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                          ML-SAD
+                        </p>
+                        <p>
+                          Novel few-shot ML architecture for efficient calibration of users for generalized EEG & EMG applications, increasing the generalizability of neurotech applications across users.                 
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                        <div class="meta mb-3">
+                          
+                          <div style="color: palevioletred;">[Coming soon]</div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/devices-ssvep.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                          SSVEP
+                        </p>
+                        <p>
+                          Structured packages for generalized SSVEP application + “Choose Your Own Adventure” game with a hands-free SSVEP-based controller                    
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                        <div class="meta mb-3">
+                          
+                          <div style="color: palevioletred;">[Coming soon]</div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/devices-p300.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                          P300
+                        </p>
+                        <p>
+                          Structured packages for generalized P300 application + P300-based lie detector
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                        <div class="meta mb-3">
+                          
+                          <div style="color: palevioletred;">[Coming soon]</div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+                    </div>
+                    </div>
+                  </div>
+                  <br><br><br>
+              </section>
+
+
+          </div>
+        </div>
+      </section>
+
+    <!-- Adding the "Sponsors" section -->
+    
+
+    
+    <section class="ftco-section testimony-section">
         <div class="container">
-            <div class="row mb-5">
-                <!--"Our Divisions"-->
-                <div class="col-12 text-center">
-                    <h2 class="mb-4 section-title">Our Divisions</h2>
-                </div>
+          <div class="row justify-content-center mb-4 pb-4">
+            <div class="col-md-10 text-center heading-section ftco-animate fadeInUp ftco-animated">
+                <br>
+                <br>
+              <h2 style = "font-weight: bold;">Community Partners</h2>
+              <p class="mt-4">Thank you to our sponsors!</p>
             </div>
-
-            <!--
-            <div class="row">
-                <img src="images/divisions section.png" alt="Divisions" id="division_map_banner" usemap="#divisions_map" class="center" width="1400px" height="770px">
-
-                 goal is to create an image map, where each circle links to a division 
-                <map name="divisions_map">
-                    <area shape="circle" onmouseover='myHover(this);' onmouseout='myLeave();' coords="308,155,113" alt="Software" title="SOFTWARE: Coding Solutions" href="divisions.html#software">
-                    <area shape="circle" onmouseover='myHover(this);' onmouseout='myLeave();' coords="171,395,113" alt="Devices" title="DEVICES: Building Hardware" href="divisions.html#devices">
-                    <area shape="circle" onmouseover='myHover(this);' onmouseout='myLeave();' coords="312,625,113" alt="Consulting" title="CONSULTING: Collaborations with Industry" href="divisions.html#consulting">
-                    <area shape="circle" onmouseover='myHover(this);' onmouseout='myLeave();' coords="840,154,113" alt="Outreach" title="OUTREACH: Startups, Speakers, Events" href="divisions.html#outreach">
-                    <area shape="circle" onmouseover='myHover(this);' onmouseout='myLeave();' coords="960,401,113" alt="Publications" title="PUBLICATIONS: What's New in Neurotech?" href="divisions.html#publications">
-                    <area shape="circle" onmouseover='myHover(this);' onmouseout='myLeave();' coords="842,625,113" alt="Education" title="EDUCATION: Decal!" href="divisions.html#education">
-                </map>
-                <div id="tooltip" class="tooltip"></div>
-            </div>
-                 <img class="image1" src="images/software_banner.png"> 
-            <br><br><br> --->
-
+          </div>
+          <div class="row justify-content-center align-items-center">
+              <div class="col-md-4 ftco-animate mx-2 mb-4 pb-4 fadeInUp ftco-animated text-center">
+                <a href="https://healthtech.berkeley.edu/" target="_blank">
+                    <img src="https://healthtech.berkeley.edu/wp-content/uploads/2022/07/KRco-lab_logo_cmyk.png" class="img-fluid healthtech-logo" loading="lazy">
+                </a>
+                <br><br><br>
+              </div>
             
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <!--Left Column-->
-                    <!-- Software -->
-                    <a href="divisions.html#software" class="work-thumb" id="softwareTile">
-                        <div class="work-text">
-                            <h2>Software</h2>
-                            <p> Coding solutions </p>
-                        </div>
-                        <img src="images/division_banners/software.jpg" alt="Image" class="img-fluid" width="540px"
-                            height="540px">
-                    </a>
-                    <!-- Consulting -->
-                    <a href="divisions.html#consulting" class="work-thumb" id="consultingTile">
-                        <div class="work-text">
-                            <h2>Consulting</h2>
-                            <p> Collaborations with Industry </p>
-                        </div>
-                        <img src="images/division_banners/consulting.jpg" alt="Image" class="img-fluid" width="540px"
-                            height="540px">
-                    </a>
-                    <!-- Publications -->
-                    <a href="divisions.html#publications" class="work-thumb" id="publicationsTile">
-                        <div class="work-text">
-                            <h2>Publications</h2>
-                            <p>What's New in Neurotech?</p>
-                        </div>
-                        <img src="images/division_banners/publications.jpg" alt="Image" class="img-fluid" width="540px"
-                            height="540px">
-                    </a>
-                </div>
-
-                <div class="col-lg-6">
-                    <!--Right Column-->
-                    <!-- Devices -->
-                    <a href="divisions.html#devices" class="work-thumb" id="devicesTile">
-                        <div class="work-text">
-                            <h2>Devices</h2>
-                            <p> Building Hardware </p>
-                        </div>
-                        <img src="images/division_banners/devices.jpg" alt="Image" class="img-fluid" width="540px"
-                            height="540px">
-                    </a>
-                    <!-- Outreach -->
-                    <a href="divisions.html#outreach" class="work-thumb" id="outreachTile">
-                        <div class="work-text">
-                            <h2>Outreach</h2>
-                            <p>Startups, Speakers, Events</p>
-                        </div>
-                        <img src="images/division_banners/outreach.jpg" alt="Image" class="img-fluid" width="540px"
-                            height="540px">
-                    </a>
-                    <!-- Education -->
-                    <a href="divisions.html#education" class="work-thumb" id="educationTile">
-                        <div class="work-text">
-                            <h2>Education</h2>
-                            <p>Decal!</p>
-                        </div>
-                        <img src="images/division_banners/education.jpg" alt="Image" class="img-fluid" width="540px"
-                            height="540px">
-                    </a>
-
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <!--"All Divisions"-->
-                <div class="col-12 text-center">
-                    <p><a href="divisions.html" class="btn btn-outline-white px-4 py-3">All Divisions</a></p>
-                </div>
-            </div>
+              <div class="col-md-4 ftco-animate mx-2 mb-4 pb-4 fadeInUp ftco-animated text-center">
+                <a href="https://jacobsinstitute.berkeley.edu/" target="_blank">
+                    <img src="https://jacobsinstitute.berkeley.edu/wp-content/uploads/2016/02/Jacobs_logo_blue.png" class="img-fluid jacob-logo" loading="lazy">
+                </a>
+                <br><br><br>
+              </div>
+              <style>
+                .healthtech-logo, .jacob-logo {
+                    max-width: 260px;
+                    height: auto;
+                }
+            </style>
+          </div>
         </div>
-
-        <!--
-            style="background-color: #345e80; height: 70vh"
-            <div class="container" style="height: 100%;">
-                <div class="row" style="height: 100%;">
-                    <img src="images/divisions section.png" alt="Divisions"
-                        style="width: 100%; height:100%; object-fit: contain;">
-                </div>
-        </div>
-        -->
-
-    </div>
-
-
-    <!-- <div class="bg-primary py-5">
-    <div class="container text-center">
-      <div class="row justify-content-center">
-        <div class="col-lg-7">
-          <h3 class="text-white mb-4 font-weight-normal">Want to get involved?</h3>
-          <p class="text-white mb-5">We are accepting applications for Fall 2019!
-            Look for more details on the timeline and application process below!</p>
-          <p class="mb-0"><a href="join.html" class="btn btn-outline-white px-4 py-3">Join!</a></p>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-
+    </section>    
 
     <footer class="site-footer" role="contentinfo">
         <div class="container">
@@ -418,19 +657,19 @@
                             <li class="d-block">
                                 <span class="d-block">Social Media</span>
                                 <a href="https://www.facebook.com/neurotechberkeley/">
-                                    <img src="images\facebookLogo.png" />
+                                    <img src="images\facebookLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://twitter.com/calneurotech">
-                                    <img src="images\twitterLogo.png" />
+                                    <img src="images\twitterLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://github.com/neurotech-berkeley">
-                                    <img src="images\githubLogo.png" />
+                                    <img src="images\githubLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://medium.com/@ucbneurotech">
-                                    <img src="images\mediumLogo.png" />
+                                    <img src="images\mediumLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UC0X69hdu_1U_KBwSxZndswQ/featured">
-                                    <img src="images\youtubeLogo.png" />
+                                    <img src="images\youtube_logo2.png" class="social-logo" />
                                 </a>
                             </li>
                             <li class="d-block">
@@ -439,18 +678,16 @@
                             </li>
                         </ul>
                     </div>
-
-
-                </div>
+                </div>                
                 <div class="col-md-3 mb-5">
                     <h3 class="mb-4">Links</h3>
                     <ul class="list-unstyled footer-link">
-                        <li><a href="index.html">Home</a></li>
+                        <!-- <li><a href="index.html">Home</a></li> -->
                         <li><a href="about.html">About</a></li>
-                        <li><a href="divisions.html">Divisions</a></li>
+                        <!-- <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li> -->
+                        <li><a href="divisions.html">Projects</a></li>
                         <li><a href="https://medium.com/neurotech-berkeley">Blog</a></li>
-                        <li><a href="mind.html">MIND</a></li>
-                        <li><a href="join.html">Join</a></li>
+                        <!-- <li><a href="https://airtable.com/appI4wgEIqTdUCD43/shr4o8TYyoiHmZvN5">Apply</a></li> -->
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -496,6 +733,38 @@
 
     <!-- <script src="particles/particles.min.js"></script>
   <script src="particles/app.js"></script> -->
+  <script>
+    $(function() {
+    $("#header-placeholder").load("header.html", function() {
+        attachScrollListener();
+    });
+});
+
+function attachScrollListener() {
+    var headerHeight = document.querySelector('#imageSection').offsetHeight;
+    var logoText = document.getElementById('logoText');
+
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth > 768) { // Only apply for larger screens
+            if (window.scrollY > headerHeight) {
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                    navItem.style.color = 'black';
+                });
+                logoText.style.color = 'black';
+            } else {
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                    navItem.style.color = 'white';
+                });
+                logoText.style.color = 'white';
+            }
+        }
+    });
+}
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 </body>
 
 </html>

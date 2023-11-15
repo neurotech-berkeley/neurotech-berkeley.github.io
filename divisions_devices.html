@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>NT@B | Venture: Devices</title>
+    <!-- <title>Neurotech@Berkeley</title> -->
+    <title>NT@B | Devices</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" href="images/WhiteLogo.png">
+    <link rel="icon" href="images/GradientLogo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
@@ -23,114 +24,764 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
 
+        @font-face {
+            font-family: 'Righteous';
+            src: url('fonts/righteous.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #logoText,
+        .navbar-brand,
+        .nav-link,
+        .nav-btn-highlight,
+        .dropdown-toggle,
+        .dropdown-item,
+        h1 {
+            font-family: 'Righteous', sans-serif;
+        }
+      .nav-item .dropdown-menu .dropdown-item:hover {
+          background-color: #3B9C9C !important;
+      }
+        .rounded-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px 50px; 
+            border-radius: 15px; 
+            display: inline-block; 
+            max-width: 70%; 
+        }
+        .custom-longer-image {
+            height: 350px;  
+            width: auto;
+        }
+        .reduced-break br {
+            line-height: 80%; 
+            display: block;
+            content: "";
+            margin-top: 0.55em; 
+        }
+        .bold-heading {
+            font-weight: 700; /* 900 is the maximum font-weight for most fonts, adjust if necessary */
+        }
+        .division-logo {
+            max-width: 50%; 
+            height: auto;
+            display: block;
+            margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
+        }
+        .division-logo-container {
+            background-image: url('images/consulting.png');
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center; 
+            width: 60px; /* adjust as necessary */
+            height: 60px; /* adjust as necessary */
+            display: block;
+            margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
+        }
+        /* new */
+        .pb-4, .py-4 {
+            padding-bottom: 1.5rem !important;
+        }
+        .mb-4, .my-4 {
+            margin-bottom: 1.5rem !important;
+        }
+        .justify-content-center {
+            justify-content: center !important;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        .center-cards {
+            justify-content: center;
+        }
+        
+        .project-card-blurb p:first-child {
+          background-color: #f0f0f0;
+          padding: 5px 10px; /* Padding around the text */
+          border-radius: 10px; /* More rounded corners */
+          display: inline-block; /* To fit the size of the content */
+        }
+        .project-card-links {
+            flex: 0 1 15%;
+            margin: 0.25rem 0.5rem 0.5rem 0.5rem;
+        }
+        .mb-3, .my-3 {
+            margin-bottom: 1rem !important;
+        }
+        .block-with-flex {
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: auto;
+            position: relative;
+            display: flex;
+        }
+        /* .ftco-animate {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .fadeInUp {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+
+        .ftco-animated {
+            -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        } */
+        .project-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            background: #fff;
+            border: 1px solid #65b9c4;
+            margin: 1rem 0 1rem 0;
+            padding: 20px; /* Increased padding inside the card */
+        }
+        /* .project-card {
+            background: #fff;
+            -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -moz-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -ms-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -o-box-shadow: 0px 4px 10px -12px #65b9c4;
+            box-shadow: 0px 4px 10px -12px #65b9c4;
+            border: 1px solid #65b9c4;
+            margin: 1rem 0 1rem 0;
+        } */
+        /* .project-card {
+            background: #fff;
+            -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -moz-box-shadow: 0px 4px 10px -12px #efac78;
+            -ms-box-shadow: 0px 4px 10px -12px #efac78;
+            -o-box-shadow: 0px 4px 10px -12px #efac78;
+            box-shadow: 0px 4px 10px -12px #efac78;
+            border: 1px solid #fed1ac;
+            margin: 1rem 0 1rem 0;
+        } */
+        .project-card .text {
+            position: relative;
+            border-top: 0;
+            border-radius: 2px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .project-card .text {
+            position: relative;
+            display: block;
+        }
+        .project-card-title {
+            flex: 0 1 25%;
+            margin: 1.5rem 0.5rem 0.75rem 0.5rem;
+        }
+        .justify-content-center {
+            justify-content: center !important;
+        }
+        .dropdown-menu {
+            background-color: white !important;
+        }
+
+        .dropdown-item:hover {
+            background-color: teal !important;
+        }
+
+        /* media format responsive: */
+        @media (max-width: 768px) {
+            .custom-longer-image {
+                width: 100%; /* Make the image take full width of the container */
+                height: auto; /* Maintain aspect ratio */
+                object-fit: cover; /* This will cover the area without stretching the image */
+            }
+        }
+        @media (max-width: 768px) {
+                .transparent-box {
+                    max-width: 90%;
+                    margin: 20px 5%;
+                }
+            }
+        @media (max-width: 768px) {
+            .footer-link {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand #logoText {
+                font-size: 15px !important; 
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar.navbar-expand-lg.bg-dark.custom-header {
+                background-color: rgba(0, 0, 0, 0.8) !important;
+            }
+        }
+        /* moblie version for navigation: */
+        .navbar-toggler-icon {
+            display: inline-block;
+            width: 22px;
+            height: 2px;
+            background-color: white;
+            position: relative;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: "";
+            background-color: white;
+            display: block;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s;
+        }
+
+        .navbar-toggler-icon::before {
+            top: -7px;
+        }
+
+        .navbar-toggler-icon::after {
+            bottom: -7px;
+        }
+    </style>
 </head>
 
 <body>
-
-    <header role="banner">
-        <nav class="navbar navbar-expand-lg  bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand " href="index.html">Neurotech@Berkeley</a>
-
+  <header role="banner" class="fixed-header">
+    <div class="header-blur">
+        <nav class="navbar navbar-expand-lg bg-dark custom-header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/GradientLogo.png" alt="Logo" style="height: 30px; margin-right: 5px;">
+                    <span id="logoText" style="color: white;">Neurotech@Berkeley</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
                     aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-
                 <div class="collapse navbar-collapse" id="navbarsExample05">
                     <ul class="navbar-nav pl-md-5 ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="about.html">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="divisions.html">Divisions</a>
-                            <ul>
-                                <li class="dropdown-item">
-                                    <a href="divisions_software.html">Venture: Software</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_devices.html"> Venture: Devices</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_consulting.html">Consulting</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_outreach.html">Outreach</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_publications.html">Publications</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_education.html">Education</a>
-                                </li>
-                            </ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Projects
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                <a class="dropdown-item" href="divisions_devices.html">Software & Devices</a>
+                                <a class="dropdown-item" href="divisions_consulting.html">Industry</a>
+                                <a class="dropdown-item" href="divisions_education.html">Education</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Publications
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+                                <a class="dropdown-item" href="https://ucbneurotech.medium.com/" target="_blank">Blog</a>
+                                <a class="dropdown-item" href="divisions_publications.html">MIND</a>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://ucbneurotech.medium.com/">Blog</a>
+                          <a class="nav-link" href="conference.html">Conference</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="mind.html">MIND</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="join.html">Join</a>
-                        </li>
-                        <li class="nav=item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
+                        <li class="nav-item">
+                            <!-- <a class="btn nav-btn-highlight app-btn-bg" href="join.html" style="color: rgb(255, 255, 255); font-weight: 900; text-transform: none; margin-top: 24px; vertical-align: middle;">Apply</a> -->
+                        </li>
                     </ul>
-
                 </div>
             </div>
         </nav>
-    </header>
+    </div>
+</header>
+
     <!-- END header -->
 
-    <div class="inner-page">
-        <div class="slider-item overlay darken"
-            style="background-image: url('images/old_banner.jpg'); background-color: #0B2041;"
-            data-stellar-background-ratio="0.5">
+    <div class="inner-page" id="imageSection"> 
+        <div class="slider-item overlay darken" style="background-image: url('images/devices_working.jpg'); background-color: #0B2041; height: 104vh; background-position: center center;" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
             <div class="container">
-                <div class="row slider-text align-items-center justify-content-center">
-                    <div class="col-lg-9 text-center col-sm-12 element-animate">
-                        <h1 class="mb-4" style="text-align: center">Venture: Devices</h1>
-                        <p class="custom-breadcrumbs">Products for the mind, by the mind. Neurotech@Berkeley’s devices
-                            division aims to help members develop the skills to design products for the future.</p>
-                        <p class="custom-breadcrumbs"><i>Golden bears creating hardwares.</i></p>
+                <div class="row slider-text justify-content-center align-items-center">
+                    <div class="col-md-10 col-sm-12 ftco-animate mb-4 text-center fadeInUp ftco-animated">
+                        <div class="rounded-box">
+                            <h1 class="mb-3 bread" style="color: #ffffff;">Software & Devices</h1>
+                            <p class="custom-breadcrumbs">
+                              Products for the mind, by the mind. Our devices and software 
+                              divisions aim to help members develop the skills to design products for the future.
+                              </p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div>         
         </div>
     </div>
 
     <div class="section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 mr-auto mb-5">
-                    <span class="d-block text-uppercase text-secondary">TITLE</span>
-                    <span class="divider my-4"></span>
-                    <h2 class="mb-4 section-title">SECTION TITLE</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta porttitor posuere.
-                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    </p>
-                    <p>Sed in ante a lectus lacinia laoreet ut non est. Duis congue auctor ante, ultrices egestas sem
-                        ullamcorper non.</p>
-                    <!-- <p class="mb-5">To see a showcase of some of our divisions' latest magic, follow the link below:</p>
-          <p><a href="portfolio.html" class="btn btn-outline-black">Learn More</a></p> -->
+                <div class="mr-auto mb-5">
+                    <span class="d-block text-uppercase text-secondary"></span>
                 </div>
-                <div class="col-lg-6">
-                    <figure class="img-dotted-bg">
-                        <img src="images/GradientLogo.png" alt="Image" class="img-fluid">
-                    </figure>
-                </div>
+                <!-- <div class="col-lg-6">
+          <figure class="img-dotted-bg">
+            <img src="images/old_logo.png" alt="Image" class="img-fluid">
+          </figure>
+        </div> -->
             </div>
         </div>
     </div>
 
+    <section class="ftco-section">
+        <div class="container">
+          <div id="project-mission">
+            <div class="row ftco-animate justify-content-center mb-4 pb-4 fadeInUp ftco-animated">
+              <div class="col-md-6 my-auto ftco-animate mb-2 pb-2 fadeInUp ftco-animated">
+                <h3 style="text-align: center; font-weight: bolder">Purpose</h3>
+                <br>
+                <p style="text-align: left; overflow-wrap: break-word; line-height: 1.5;">
+                  Neurotechnology’s potential to improve lives is unmatched. Neurotech@Berkeley is committed to building innovative, impactful software and hardware solutions to big problems.
+                </p>
+                <p style="text-align: left; overflow-wrap: break-word; line-height: 1.5;">
+                  Each year, we participate in our parent organization NeurotechX’s Open Challenge where we are tasked with using EEG data to build a software-based solution to a neuroscience problem. We are currently working on a variety of software based projects ranging from learning tools to music selection. On the hardware front, we’re developing custom, non-invasive neural interfaces: EMG-based wristband, EOG-based eye-tracking headset, and a flexible EEG headset.
+                </p>
+              </div>
+              <div class="col-md-6 order-first order-md-last ftco-animate mb-2 pb-2 fadeInUp ftco-animated">
+                 <img src="images/devices_group_pic.jpg" class="img-fluid custom-longer-image">
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="ftco-section gray-background">
+        <div class="container">
+          <div id="recent-projects">
+            <div class="row justify-content-center mb-4 pb-4">
+              <div class="col-md-10 text-center heading-section ftco-animate fadeInUp ftco-animated">
+                <br>
+                <br>
+                <br>
+                <h2 style="font-weight: 900;">Current Projects</h2>
+              </div>
+            </div>
+            <div class="row center-cards">
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/devices-robles-reuben.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                        RobLES
+                    </p>
+                    <p>
+                      Build and control an external limb using EMG (building off of Neurowrist work)
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div style="color: palevioletred;">[Coming soon]</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/devices-pong.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      Wetware Computing
+                  </p>
+                  <p>
+                    Bridging the gap between silicon and biology - the first collegiate initiative to compute and understand live neural circuits!
+                  </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div style="color: palevioletred;">[Coming soon]</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/devices-neuromorph.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      Neuromorph
+                    </p>
+                    <p>
+                      Design and build a flexible EEG that is affordable and enables user-defined electrode position and count
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div style="color: palevioletred;">[Coming soon]</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/devices-mlsad.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      ML-SAD
+                    </p>
+                    <p>
+                      Novel few-shot ML architecture for efficient calibration of users for generalized EEG & EMG applications, increasing the generalizability of neurotech applications across users.                 
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div style="color: palevioletred;">[Coming soon]</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/devices-ssvep.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      SSVEP
+                    </p>
+                    <p>
+                      Structured packages for generalized SSVEP application + “Choose Your Own Adventure” game with a hands-free SSVEP-based controller                    
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div style="color: palevioletred;">[Coming soon]</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/devices-p300.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      P300
+                    </p>
+                    <p>
+                      Structured packages for generalized P300 application + P300-based lie detector
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div style="color: palevioletred;">[Coming soon]</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            </div>
+          </div>
+          <br><br><br>
+      </section>
+
+    <section class="ftco-section gray-background">
+        <div class="container">
+          <div id="past-projects">
+            <div class="row justify-content-center mb-4 pb-4">
+              <div class="col-md-10 text-center heading-section ftco-animate fadeInUp ftco-animated">
+                <h2 style = "font-weight: 900;">Recent Archives</h2>
+              </div>
+            </div>
+            <div class="row center-cards">
+
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/neuro-wrist.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      Neurowrist
+                    </p>
+                    <p>
+                      Utilize real-time processing EMG signals from the wrist and translate captured features into controls
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                        <div><a href="https://showspace.so/p/6224?refPageType=company&refPageLabel=Neurotech@Berkeley&refPageSlug=neurotech-berkeley" target="_blank">Showspace</a></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/devices_gazewear.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      Gazeware
+                    </p>
+                    <p>
+                      Answering visual questions using image and word embeddings and recurrent attention algorithms                   
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                        <div><a href="https://showspace.so/p/6223?refPageType=company&refPageLabel=Neurotech@Berkeley&refPageSlug=neurotech-berkeley" target="_blank">Showspace</a></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/devices-roboarm.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      EMG Roboarm
+                    </p>
+                    <p>
+                      Built machine learning classifier for EMG signals for operating a 3D printed prosthetic arm                    
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div><a href="https://drive.google.com/file/d/1FC7thz0Cp7MR9citlp_H7udDcctVebfn/view?usp=sharing" target="_blank">Poster Board</a></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/devices-car.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      EEG Mind-Control Car
+                    </p>
+                    <p>
+                      Used EEG tracking with a Muse headset for hands-free vehicle control through blinks and winks
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div style="color: palevioletred;">[Coming soon]</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/devices-gif.gif" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      EEG Art
+                    </p>
+                    <p>
+                      Used EEG signals collected through a Muse headset to generate real-time visual art based on the user's brainstate
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div style="color: palevioletred;">[Coming soon]</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/caninebci.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      Canine fNIRS BCI
+                    </p>
+                    <p>
+                      Built an fNIRS headset for dogs for tracking oxygenation of their olfactory bulb to detect disease states of their owners                    
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div style="color: palevioletred;">[Coming soon]</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/tunablePCB.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      Tunable PCB for EMG/EEG
+                    </p>
+                    <p>
+                      An EOG headset and application for monitoring productivity during work sessions. Analyzes EOG signals to measure focus, fatigue, and alertness and displays metrics in a dashboard.
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div style="color: palevioletred;">[Coming soon]</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/devices_focuspocus.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p>
+                        Designed and trained CNN for classifying P300 event-related potentials to create a BCI for hands-free typing
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div style="color: palevioletred;">[Coming soon]</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/eegMusic.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      EEG Music
+                    </p>
+                    <p>
+                      EEG Music project on mood classification and playback control                   
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div><a href="https://github.com/neurotech-berkeley/software-eeg-music-sp23" target="_blank">Github</a></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            </div>
+          </div>
+          <br><br><br><br><br>
+        
+      </section>
     <!-- END section -->
 
 
@@ -157,19 +808,19 @@
                             <li class="d-block">
                                 <span class="d-block">Social Media</span>
                                 <a href="https://www.facebook.com/neurotechberkeley/">
-                                    <img src="images\facebookLogo.png" />
+                                    <img src="images\facebookLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://twitter.com/calneurotech">
-                                    <img src="images\twitterLogo.png" />
+                                    <img src="images\twitterLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://github.com/neurotech-berkeley">
-                                    <img src="images\githubLogo.png" />
+                                    <img src="images\githubLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://medium.com/@ucbneurotech">
-                                    <img src="images\mediumLogo.png" />
+                                    <img src="images\mediumLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UC0X69hdu_1U_KBwSxZndswQ/featured">
-                                    <img src="images\youtubeLogo.png" />
+                                    <img src="images\youtube_logo2.png" class="social-logo" />
                                 </a>
                             </li>
                             <li class="d-block">
@@ -178,18 +829,16 @@
                             </li>
                         </ul>
                     </div>
-
-
-                </div>
+                </div>                
                 <div class="col-md-3 mb-5">
                     <h3 class="mb-4">Links</h3>
                     <ul class="list-unstyled footer-link">
-                        <li><a href="index.html">Home</a></li>
+                        <!-- <li><a href="index.html">Home</a></li> -->
                         <li><a href="about.html">About</a></li>
-                        <li><a href="divisions.html">Divisions</a></li>
-                        <li><a href="https://medium.com/@ucbneurotech">Blog</a></li>
-                        <li><a href="mind.html">MIND</a></li>
-                        <li><a href="join.html">Join</a></li>
+                        <!-- <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li> -->
+                        <li><a href="divisions.html">Projects</a></li>
+                        <li><a href="https://medium.com/neurotech-berkeley">Blog</a></li>
+                        <!-- <li><a href="join.html">Apply</a></li> -->
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -232,6 +881,42 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- <script src="particles/particles.min.js"></script>
+  <script src="particles/app.js"></script> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the height of the header image to know when it's fully scrolled past.
+        var headerHeight = document.querySelector('.slider-item.overlay').offsetHeight;
+        var logoText = document.getElementById('logoText');
+
+        window.addEventListener('scroll', function() {
+            // If we've scrolled past the header, change the link colors to black.
+            if (window.scrollY > headerHeight) {
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                    navItem.style.color = 'black';
+                });
+                logoText.style.color = 'black';  // Changing the logo color
+            } else {
+                // Otherwise, keep the link colors as white.
+                // header.style.backgroundColor = 'rgba(255, 255, 255, 0.7)'
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                    navItem.style.color = 'black';
+
+                    // navItem.style.color = 'white';
+                });
+                logoText.style.color = 'black';  // Changing the logo color back to white
+                // logoText.style.color = 'white';  // Changing the logo color back to white
+            }
+        });
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#header-placeholder").load("header.html");
+        });
+    </script>
 </body>
 
 </html>

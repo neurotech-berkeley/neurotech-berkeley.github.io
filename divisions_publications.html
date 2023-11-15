@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>NT@B | Publications</title>
+    <!-- <title>Neurotech@Berkeley</title> -->
+    <title>NT@B@ | MIND</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" href="images/WhiteLogo.png">
+    <link rel="icon" href="images/GradientLogo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
@@ -23,114 +24,465 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        @font-face {
+            font-family: 'Righteous';
+            src: url('fonts/righteous.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #logoText,
+        .navbar-brand,
+        .nav-link,
+        .nav-btn-highlight,
+        .dropdown-toggle,
+        .dropdown-item,
+        h1 {
+            font-family: 'Righteous', sans-serif;
+        }
+       .nav-item .dropdown-menu .dropdown-item:hover {
+          background-color: #3B9C9C !important;
+      }
+        .rounded-box {
+            position: relative;
+            z-index: 1500;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px 50px; 
+            border-radius: 15px; 
+            display: inline-block; 
+            max-width: 70%; 
+        }
+        .custom-longer-image {
+            height: 350px;  
+            width: auto;
+        }
+        .reduced-break br {
+            line-height: 80%; 
+            display: block;
+            content: "";
+            margin-top: 0.55em; 
+        }
+        .bold-heading {
+            font-weight: 700; /* 900 is the maximum font-weight for most fonts, adjust if necessary */
+        }
+        .division-logo {
+            max-width: 50%; 
+            height: auto;
+            display: block;
+            margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
+        }
+        .division-logo-container {
+            background-image: url('images/consulting.png');
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center; 
+            width: 60px; /* adjust as necessary */
+            height: 60px; /* adjust as necessary */
+            display: block;
+            margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
+        }
+        /* new */
+        .pb-4, .py-4 {
+            padding-bottom: 1.5rem !important;
+        }
+        .mb-4, .my-4 {
+            margin-bottom: 1.5rem !important;
+        }
+        .justify-content-center {
+            justify-content: center !important;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        .center-cards {
+            justify-content: center;
+        }
+        .project-card-blurb {
+            flex: 0 1 65%;
+            margin: 0.75rem 0.5rem 0.25rem 0.5rem;
+        }
+        .project-card-links {
+            flex: 0 1 15%;
+            margin: 0.25rem 0.5rem 0.5rem 0.5rem;
+        }
+        .mb-3, .my-3 {
+            margin-bottom: 1rem !important;
+        }
+        .block-with-flex {
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: auto;
+            position: relative;
+            display: flex;
+        }
+        /* .ftco-animate {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .fadeInUp {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+
+        .ftco-animated {
+            -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        } */
+        .project-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
+            background: #fff;
+            /* -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -moz-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -ms-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -o-box-shadow: 0px 4px 10px -12px #65b9c4; */
+            /* box-shadow: 0px 4px 10px -12px #65b9c4; */
+            border: 1px solid #65b9c4;
+            margin: 1rem 0 1rem 0;
+        }.project-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
+            background: #fff;
+            /* -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -moz-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -ms-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -o-box-shadow: 0px 4px 10px -12px #65b9c4; */
+            /* box-shadow: 0px 4px 10px -12px #65b9c4; */
+            border: 1px solid #65b9c4;
+            margin: 1rem 0 1rem 0;
+        }
+        .project-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
+            background: #fff;
+            /* -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -moz-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -ms-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -o-box-shadow: 0px 4px 10px -12px #65b9c4; */
+            /* box-shadow: 0px 4px 10px -12px #65b9c4; */
+            border: 1px solid #65b9c4;
+            margin: 1rem 0 1rem 0;
+        }
+        /* .project-card {
+            background: #fff;
+            -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -moz-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -ms-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -o-box-shadow: 0px 4px 10px -12px #65b9c4;
+            box-shadow: 0px 4px 10px -12px #65b9c4;
+            border: 1px solid #65b9c4;
+            margin: 1rem 0 1rem 0;
+        } */
+        /* .project-card {
+            background: #fff;
+            -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -moz-box-shadow: 0px 4px 10px -12px #efac78;
+            -ms-box-shadow: 0px 4px 10px -12px #efac78;
+            -o-box-shadow: 0px 4px 10px -12px #efac78;
+            box-shadow: 0px 4px 10px -12px #efac78;
+            border: 1px solid #fed1ac;
+            margin: 1rem 0 1rem 0;
+        } */
+        .project-card .text {
+            position: relative;
+            border-top: 0;
+            border-radius: 2px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .project-card .text {
+            position: relative;
+            display: block;
+        }
+        .project-card-title {
+            flex: 0 1 25%;
+            margin: 1.5rem 0.5rem 0.75rem 0.5rem;
+        }
+        .justify-content-center {
+            justify-content: center !important;
+        }
+        .dropdown-menu {
+            background-color: white !important;
+        }
+
+        .dropdown-item:hover {
+            background-color: teal !important;
+        }
+        @media (max-width: 768px) {
+            .custom-longer-image {
+                width: 100%; /* Make the image take full width of the container */
+                height: auto; /* Maintain aspect ratio */
+                object-fit: cover; /* This will cover the area without stretching the image */
+            }
+        }
+
+    </style>
 
 </head>
 
 <body>
-
-    <header role="banner">
-        <nav class="navbar navbar-expand-lg  bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand " href="index.html">Neurotech@Berkeley</a>
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
-                    aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-
-                <div class="collapse navbar-collapse" id="navbarsExample05">
-                    <ul class="navbar-nav pl-md-5 ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="divisions.html">Divisions</a>
-                            <ul>
-                                <li class="dropdown-item">
-                                    <a href="divisions_software.html">Venture: Software</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_devices.html"> Venture: Devices</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_consulting.html">Consulting</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_outreach.html">Outreach</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_publications.html">Publications</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_education.html">Education</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://ucbneurotech.medium.com/">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="mind.html">MIND</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="join.html">Join</a>
-                        </li>
-                        <li class="nav=item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- END header -->
-
-    <div class="inner-page">
-        <div class="slider-item overlay darken"
-            style="background-image: url('images/old_banner.jpg'); background-color: #0B2041;"
-            data-stellar-background-ratio="0.5">
-            <div class="container">
-                <div class="row slider-text align-items-center justify-content-center">
-                    <div class="col-lg-9 text-center col-sm-12 element-animate">
-                        <h1 class="mb-4" style="text-align: center">Publications</h1>
-                        <p class="custom-breadcrumbs">The world of neurotechnology changes as fast as thought.
-                            Neurotech@Berkeley's publications division covers the latest in the industry, writing on
-                            bioethics, data privacy, and technical innovations.</p>
-                        <p class="custom-breadcrumbs"><i>A bunch of CS/MCB majors turned newspaper nerds.</i></p>
+    <header role="banner" class="fixed-header">
+        <div class="header-blur">
+            <nav class="navbar navbar-expand-lg bg-dark custom-header">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/GradientLogo.png" alt="Logo" style="height: 30px; margin-right: 5px;">
+                        <span id="logoText" style="color: white;">Neurotech@Berkeley</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
+                        aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarsExample05">
+                        <ul class="navbar-nav pl-md-5 ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Projects
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                    <a class="dropdown-item" href="divisions_devices.html">Software & Devices</a>
+                                    <a class="dropdown-item" href="divisions_consulting.html">Industry</a>
+                                    <a class="dropdown-item" href="divisions_education.html">Education</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Publications
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+                                    <a class="dropdown-item" href="https://ucbneurotech.medium.com/" target="_blank">Blog</a>
+                                    <a class="dropdown-item" href="divisions_publications.html">MIND</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="conference.html">Conference</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- <a class="btn nav-btn-highlight app-btn-bg" href="join.html" style="color: rgb(255, 255, 255); font-weight: 900; text-transform: none; margin-top: 24px; vertical-align: middle;">Apply</a> -->
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- END header -->
+
+    <div class="inner-page" id="imageSection"> 
+        <div class="slider-item overlay darken" style="background-image: url('images/publications_background.jpg'); background-color: #0B2041; height: 104vh; background-position: center center;">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text justify-content-center align-items-center">
+                    <div class="col-md-10 col-sm-12 ftco-animate mb-4 text-center fadeInUp ftco-animated">
+                        <div class="rounded-box">
+                            <h1 class="mb-3 bread" style="color: #ffffff; z-index: 1000; position: relative;">MIND</h1>
+                            <p class="custom-breadcrumbs">The world of neurotechnology changes as fast as thought.
+                                Neurotech@Berkeley's publications division covers the latest in the industry, writing on
+                                bioethics, data privacy, and technical innovations.</p>
+                            <p class="custom-breadcrumbs"><i>A bunch of CS/MCB majors turned newspaper nerds.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>         
         </div>
     </div>
 
     <div class="section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 mr-auto mb-5">
-                    <span class="d-block text-uppercase text-secondary">TITLE</span>
-                    <span class="divider my-4"></span>
-                    <h2 class="mb-4 section-title">SECTION TITLE</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta porttitor posuere.
-                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    </p>
-                    <p>Sed in ante a lectus lacinia laoreet ut non est. Duis congue auctor ante, ultrices egestas sem
-                        ullamcorper non.</p>
-                    <!-- <p class="mb-5">To see a showcase of some of our divisions' latest magic, follow the link below:</p>
-          <p><a href="portfolio.html" class="btn btn-outline-black">Learn More</a></p> -->
+                <div class="mr-auto mb-5">
+                    <span class="d-block text-uppercase text-secondary"></span>
                 </div>
-                <div class="col-lg-6">
-                    <figure class="img-dotted-bg">
-                        <img src="images/GradientLogo.png" alt="Image" class="img-fluid">
-                    </figure>
-                </div>
+                <!-- <div class="col-lg-6">
+          <figure class="img-dotted-bg">
+            <img src="images/old_logo.png" alt="Image" class="img-fluid">
+          </figure>
+        </div> -->
             </div>
         </div>
     </div>
+
+    <section class="ftco-section">
+        <div class="container">
+          <div id="project-mission">
+            <div class="row ftco-animate justify-content-center mb-4 pb-4 fadeInUp ftco-animated">
+              <div class="col-md-6 my-auto ftco-animate mb-2 pb-2 fadeInUp ftco-animated">
+                <h3 style="text-align: center; font-weight: bolder">Purpose</h3>
+                <br>
+                <p style="text-align: left; overflow-wrap: break-word; line-height: 1.5;">
+                    MIND is Neurotech@Berkeley's  international student-run journal collaborating among organizations in the Neurotech community. MIND serves as a well of knowledge exploring myriad aspects of Neurotechnology, hoping to educate, inspire, and instill wonder regarding recent discoveries and promising possibilities.
+                </p>
+              </div>
+              <div class="col-md-6 order-first order-md-last ftco-animate mb-2 pb-2 fadeInUp ftco-animated">
+                 <img src="images/publications_group_photo.jpg" class="img-fluid custom-longer-image">
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="ftco-section gray-background">
+        <div class="container">
+          <div id="past-projects">
+            <div class="row justify-content-center mb-4 pb-4">
+              <div class="col-md-10 text-center heading-section ftco-animate fadeInUp ftco-animated">
+                <br><br><br>
+                <h2 style = "font-weight: 900;">Past Magazines</h2>
+              </div>
+            </div>
+            <div class="row center-cards">
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/mind-fa22.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p>
+                        Mindf*ck [Fall '22]
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                        <div><a href="https://neurotech.berkeley.edu/MIND_F22.pdf" target="_blank" style="color: #3db0b0; font-weight: bolder;">Click to read!</a></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/mind-sp22.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p>
+                        Dark Side of the Mind [Spring '22]
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                        <div><a href="https://neurotech.berkeley.edu/MIND_SP22.pdf" target="_blank" style="color: #3db0b0; font-weight: bolder;">Click to read!</a></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/mind-fa21.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p>
+                        Change My Mind [Fall '21]
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                        <div><a href="https://neurotech.berkeley.edu/MIND_F21.pdf" target="_blank" style="color: #3db0b0; font-weight: bolder;">Click to read!</a></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/mind-sp21.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p>
+                        Other Minds [Spring '21]
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                        <div><a href="https://neurotech.berkeley.edu/MIND_SP21.pdf" target="_blank" style="color: #3db0b0; font-weight: bolder;">Click to read!</a></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/mind-fa20.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p>
+                        The Subconscious [Fall '20]
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                        <div><a href="https://neurotech.berkeley.edu/MIND_F20.pdf" target="_blank" style="color: #3db0b0; font-weight: bolder;">Click to read!</a></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/mind-sp20.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p>
+                        Age [Spring '20]
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                        <div><a href="https://neurotech.berkeley.edu/MIND_SP20.pdf" target="_blank" style="color: #3db0b0; font-weight: bolder;">Click to read!</a></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            </div>
+          </div>
+          <br><br><br><br><br>
+        
+      </section>
 
     <!-- END section -->
 
@@ -158,19 +510,19 @@
                             <li class="d-block">
                                 <span class="d-block">Social Media</span>
                                 <a href="https://www.facebook.com/neurotechberkeley/">
-                                    <img src="images\facebookLogo.png" />
+                                    <img src="images\facebookLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://twitter.com/calneurotech">
-                                    <img src="images\twitterLogo.png" />
+                                    <img src="images\twitterLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://github.com/neurotech-berkeley">
-                                    <img src="images\githubLogo.png" />
+                                    <img src="images\githubLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://medium.com/@ucbneurotech">
-                                    <img src="images\mediumLogo.png" />
+                                    <img src="images\mediumLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UC0X69hdu_1U_KBwSxZndswQ/featured">
-                                    <img src="images\youtubeLogo.png" />
+                                    <img src="images\youtube_logo2.png" class="social-logo" />
                                 </a>
                             </li>
                             <li class="d-block">
@@ -179,18 +531,16 @@
                             </li>
                         </ul>
                     </div>
-
-
-                </div>
+                </div>                
                 <div class="col-md-3 mb-5">
                     <h3 class="mb-4">Links</h3>
                     <ul class="list-unstyled footer-link">
-                        <li><a href="index.html">Home</a></li>
+                        <!-- <li><a href="index.html">Home</a></li> -->
                         <li><a href="about.html">About</a></li>
-                        <li><a href="divisions.html">Divisions</a></li>
-                        <li><a href="https://medium.com/@ucbneurotech">Blog</a></li>
-                        <li><a href="mind.html">MIND</a></li>
-                        <li><a href="join.html">Join</a></li>
+                        <!-- <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li> -->
+                        <li><a href="divisions.html">Projects</a></li>
+                        <li><a href="https://medium.com/neurotech-berkeley">Blog</a></li>
+                        <!-- <li><a href="join.html">Apply</a></li> -->
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -233,6 +583,33 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- <script src="particles/particles.min.js"></script>
+  <script src="particles/app.js"></script> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the height of the header image to know when it's fully scrolled past.
+        var headerHeight = document.querySelector('.slider-item.overlay').offsetHeight;
+        var logoText = document.getElementById('logoText');
+
+        window.addEventListener('scroll', function() {
+            // If we've scrolled past the header, change the link colors to black.
+            if (window.scrollY > headerHeight) {
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                    navItem.style.color = 'black';
+                });
+                logoText.style.color = 'black';  // Changing the logo color
+            } else {
+                // Otherwise, keep the link colors as white.
+                // header.style.backgroundColor = 'rgba(255, 255, 255, 0.7)'
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                    navItem.style.color = 'white';
+                });
+                logoText.style.color = 'white';  // Changing the logo color back to white
+            }
+        });
+    });
+</script>
 </body>
 
 </html>

@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
+    <!-- <title>Neurotech@Berkeley</title> -->
     <title>NT@B | Education</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" href="images/WhiteLogo.png">
+    <link rel="icon" href="images/GradientLogo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
@@ -23,116 +24,201 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        @font-face {
+            font-family: 'Righteous';
+            src: url('fonts/righteous.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #logoText,
+        .navbar-brand,
+        .nav-link,
+        .nav-btn-highlight,
+        .dropdown-toggle,
+        .dropdown-item,
+        h1 {
+            font-family: 'Righteous', sans-serif;
+        }
+       .nav-item .dropdown-menu .dropdown-item:hover {
+          background-color: #3B9C9C !important;
+      }
+        .rounded-box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px 50px; 
+            border-radius: 15px; 
+            display: inline-block; 
+            max-width: 70%; 
+        }
+        .custom-longer-image {
+            height: 350px;  
+            width: auto;
+        }
+        .reduced-break br {
+            line-height: 80%; 
+            display: block;
+            content: "";
+            margin-top: 0.55em; 
+        }
+        .bold-heading {
+            font-weight: 700; /* 900 is the maximum font-weight for most fonts, adjust if necessary */
+        }
+        .division-logo {
+            max-width: 50%; 
+            height: auto;
+            display: block;
+            margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
+        }
+        .division-logo-container {
+            background-image: url('images/consulting.png');
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center; 
+            width: 60px; /* adjust as necessary */
+            height: 60px; /* adjust as necessary */
+            display: block;
+            margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
+        }
+        .dropdown-menu {
+            background-color: white !important;
+        }
+
+        .dropdown-item:hover {
+            background-color: teal !important;
+        }
+        @media (max-width: 768px) {
+            .custom-longer-image {
+                width: 100%; /* Make the image take full width of the container */
+                height: auto; /* Maintain aspect ratio */
+                object-fit: cover; /* This will cover the area without stretching the image */
+            }
+        }
+
+
+    </style>
 
 </head>
 
 <body>
-
-    <header role="banner">
-        <nav class="navbar navbar-expand-lg  bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand " href="index.html">Neurotech@Berkeley</a>
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
-                    aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-
-                <div class="collapse navbar-collapse" id="navbarsExample05">
-                    <ul class="navbar-nav pl-md-5 ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="divisions.html">Divisions</a>
-                            <ul>
-                                <li class="dropdown-item">
-                                    <a href="divisions_software.html">Venture: Software</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_devices.html"> Venture: Devices</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_consulting.html">Consulting</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_outreach.html">Outreach</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_publications.html">Publications</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="divisions_education.html">Education</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://ucbneurotech.medium.com/">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="mind.html">MIND</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="join.html">Join</a>
-                        </li>
-                        <li class="nav=item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- END header -->
-
-    <div class="inner-page">
-        <div class="slider-item overlay darken"
-            style="background-image: url('images/old_banner.jpg'); background-color: #0B2041;"
-            data-stellar-background-ratio="0.5">
-            <div class="container">
-                <div class="row slider-text align-items-center justify-content-center">
-                    <div class="col-lg-9 text-center col-sm-12 element-animate">
-                        <h1 class="mb-4" style="text-align: center">Education</h1>
-                        <p class="custom-breadcrumbs">Spreading knowledge and passion for neurotech through a
-                            student-led DeCal, Intro to Neurotechnology.</p>
-                        <p class="custom-breadcrumbs"><i>Nurturing neurotech newcomers.</i></p>
+    <header role="banner" class="fixed-header">
+        <div class="header-blur">
+            <nav class="navbar navbar-expand-lg bg-dark custom-header">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/GradientLogo.png" alt="Logo" style="height: 30px; margin-right: 5px;">
+                        <span id="logoText" style="color: white;">Neurotech@Berkeley</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
+                        aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarsExample05">
+                        <ul class="navbar-nav pl-md-5 ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Projects
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+                                    <a class="dropdown-item" href="divisions_devices.html">Software & Devices</a>
+                                    <a class="dropdown-item" href="divisions_consulting.html">Industry</a>
+                                    <a class="dropdown-item" href="divisions_education.html">Education</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="publicationsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Publications
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+                                    <a class="dropdown-item" href="https://ucbneurotech.medium.com/" target="_blank">Blog</a>
+                                    <a class="dropdown-item" href="divisions_publications.html">MIND</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="conference.html">Conference</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- <a class="btn nav-btn-highlight app-btn-bg" href="join.html" style="color: rgb(255, 255, 255); font-weight: 900; text-transform: none; margin-top: 24px; vertical-align: middle;">Apply</a> -->
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
+            </nav>
+        </div>
+    </header>
+
+    
+    <!-- END header -->
+<!-- id="imageSection" -->
+    <div class="inner-page" id="imageSection"> 
+        <div class="slider-item overlay darken" style="background-image: url('images/education-cover.png'); background-color: #0B2041; height: 104vh; background-position: center center;" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row slider-text justify-content-center align-items-center">
+                    <div class="col-md-10 col-sm-12 mb-4 text-center">
+                        <div class="rounded-box">
+                            <h1 class="mb-3 bread" style="color: #ffffff;">Education</h1>
+                            <p class="custom-breadcrumbs">Spreading knowledge and passion for neurotech through a
+                                student-led DeCal, Intro to Neurotechnology.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>         
         </div>
     </div>
 
     <div class="section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 mr-auto mb-5">
-                    <span class="d-block text-uppercase text-secondary">TITLE</span>
-                    <span class="divider my-4"></span>
-                    <h2 class="mb-4 section-title">SECTION TITLE</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta porttitor posuere.
-                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    </p>
-                    <p>Sed in ante a lectus lacinia laoreet ut non est. Duis congue auctor ante, ultrices egestas sem
-                        ullamcorper non.</p>
-                    <!-- <p class="mb-5">To see a showcase of some of our divisions' latest magic, follow the link below:</p>
-          <p><a href="portfolio.html" class="btn btn-outline-black">Learn More</a></p> -->
+                <div class="mr-auto mb-5">
+                    <span class="d-block text-uppercase text-secondary"></span>
                 </div>
-                <div class="col-lg-6">
-                    <figure class="img-dotted-bg">
-                        <img src="images/GradientLogo.png" alt="Image" class="img-fluid">
-                    </figure>
-                </div>
+                <!-- <div class="col-lg-6">
+          <figure class="img-dotted-bg">
+            <img src="images/old_logo.png" alt="Image" class="img-fluid">
+          </figure>
+        </div> -->
             </div>
         </div>
     </div>
 
-    <!-- END section -->
+    <section class="ftco-section">
+        <div class="container">
+            <div id="project-mission">
+                <div class="row ftco-animate justify-content-center mb-4 pb-4 fadeInUp ftco-animated">
+                    <div class="col-md-6 my-auto ftco-animate mb-2 pb-2 fadeInUp ftco-animated">
+                        <h3 style="text-align: center; font-weight: bolder">Our Decal</h3>
+                        <br>
+                        <p style="text-align: left; overflow-wrap: break-word; line-height: 1.5;">
+                            Each semester, our Education Team runs <a href="https://github.com/neurotech-berkeley/neurotech-course" target="_blank" style="font-weight: 900; color: #3B9C9C;">CS 198-96: Intro to Neurotechnology!</a>
+                        </p>
+                        <p style="text-align: left; overflow-wrap: break-word; line-height: 1.5;">
+                            This course is a technical introduction to the field of neurotechnology. We introduce and dive deep into the various topics that neurotechnology encompasses, including but not limited to neuroscience, signal processing, machine learning, and data science.
 
+                        </p>
+                        <div class="row mb-2 pb-2">
+                            <div class="col-md-12 d-block">
+                                <p><a href="https://postybaloney.github.io/textbook/content/README.html" target="_blank" class="btn btn-primary btn-lg mt-3 py-3 px-4">Access the Textbook</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-first order-md-last ftco-animate mb-2 pb-2 fadeInUp ftco-animated">
+                        <img src="images/decal.png" class="img-fluid custom-longer-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- END section -->
 
 
     <footer class="site-footer" role="contentinfo">
@@ -157,19 +243,19 @@
                             <li class="d-block">
                                 <span class="d-block">Social Media</span>
                                 <a href="https://www.facebook.com/neurotechberkeley/">
-                                    <img src="images\facebookLogo.png" />
+                                    <img src="images\facebookLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://twitter.com/calneurotech">
-                                    <img src="images\twitterLogo.png" />
+                                    <img src="images\twitterLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://github.com/neurotech-berkeley">
-                                    <img src="images\githubLogo.png" />
+                                    <img src="images\githubLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://medium.com/@ucbneurotech">
-                                    <img src="images\mediumLogo.png" />
+                                    <img src="images\mediumLogo.png" class="social-logo" />
                                 </a>
                                 <a href="https://www.youtube.com/channel/UC0X69hdu_1U_KBwSxZndswQ/featured">
-                                    <img src="images\youtubeLogo.png" />
+                                    <img src="images\youtube_logo2.png" class="social-logo" />
                                 </a>
                             </li>
                             <li class="d-block">
@@ -178,18 +264,16 @@
                             </li>
                         </ul>
                     </div>
-
-
-                </div>
+                </div>                
                 <div class="col-md-3 mb-5">
                     <h3 class="mb-4">Links</h3>
                     <ul class="list-unstyled footer-link">
-                        <li><a href="index.html">Home</a></li>
+                        <!-- <li><a href="index.html">Home</a></li> -->
                         <li><a href="about.html">About</a></li>
-                        <li><a href="divisions.html">Divisions</a></li>
-                        <li><a href="https://medium.com/@ucbneurotech">Blog</a></li>
-                        <li><a href="mind.html">MIND</a></li>
-                        <li><a href="join.html">Join</a></li>
+                        <!-- <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li> -->
+                        <li><a href="divisions.html">Projects</a></li>
+                        <li><a href="https://medium.com/neurotech-berkeley">Blog</a></li>
+                        <!-- <li><a href="join.html">Apply</a></li> -->
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -232,6 +316,36 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- <script src="particles/particles.min.js"></script>
+  <script src="particles/app.js"></script> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the height of the header image to know when it's fully scrolled past.
+        var headerHeight = document.querySelector('.slider-item.overlay').offsetHeight;
+        var logoText = document.getElementById('logoText');
+
+        window.addEventListener('scroll', function() {
+            // If we've scrolled past the header, change the link colors to black.
+            if (window.scrollY > headerHeight) {
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                    navItem.style.color = 'black';
+                });
+                logoText.style.color = 'black';  // Changing the logo color
+            } else {
+                // Otherwise, keep the link colors as white.
+                // header.style.backgroundColor = 'rgba(255, 255, 255, 0.7)'
+                document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navItem) {
+                    navItem.style.color = 'black';
+                    // navItem.style.color = 'white';
+                });
+                logoText.style.color = 'black';  // Changing the logo color back to white
+
+                // logoText.style.color = 'white';  // Changing the logo color back to white
+            }
+        });
+    });
+</script>
 </body>
 
 </html>
