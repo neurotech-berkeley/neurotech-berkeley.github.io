@@ -41,7 +41,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(5, 88, 105, 0.6); /* Teal color with transparency */
+    background-color: rgba(5, 88, 105, 0.8); /* Teal color with transparency */
     z-index: -1;
 }
 
@@ -91,6 +91,7 @@
             display: inline-block; 
             max-width: 70%; 
         }
+        
         .custom-longer-image {
             height: 350px;  
             width: auto;
@@ -205,15 +206,54 @@
             line-height: 1.5;
             font-weight: bold;
         }
-        @media (max-width: 768px) {
-        p {
-            line-height: 1.5;
-        }
-    }
+        .image-container {
+    position: relative;
+    text-align: right; /* Aligns the container to the right */
+    height: 300px; /* Adjust based on your image size */
+    width: 300px; /* Ensure there's enough width */
+    margin-right: auto; /* This will push the container to the right */
+    margin-left: 200px; /* Adjust this to create space from the left side (or from the title) */
+    margin-top: -80px; /* New line added - adjust this value to move the images up */
+}
 
+#overlapLogo2, #circularTexts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 200px; /* Adjust as needed */
+}
+
+#overlapLogo2 {
+    z-index: 2; /* Ensures the logo is above the rotating text */
+}
+
+#circularTexts {
+    width: 450px; /* Adjusted to double the original assumed size */
+    animation: rotate 40s infinite linear;
+    z-index: 1; /* Ensures the text is below the logo */
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+
+
+        @media (max-width: 768px) {
+            p {
+                line-height: 1.5;
+            }
+        }
 
         /* media format responsive: */
-
         @media (max-width: 768px) {
                 .transparent-box {
                     max-width: 90%;
@@ -277,16 +317,26 @@
         <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
         <!-- <div class="slider-item overlay" id="imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/bluebrain.jpg'); background-position: center 50px; height: calc(100vh); position: relative; z-index: 2;"> -->
         <!-- <div class="slider-item overlay" id="imageSection" style="background-image: url('images/black-brain.jpeg'); background-position: center 0px; height: calc(100vh); position: relative; z-index: 2;"> -->
-            <div class="slider-item overlay" id="imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/backgroundFinal.png'); background-position: center; background-size: cover; height: 124vh; backdrop-filter: blur(1px);">
+            <div class="slider-item overlay" id="imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/backgroundFinal.png'); background-position: center; background-size: cover; height: 100vh; backdrop-filter: blur(3px);">
 
         <!-- <div class="slider-item overlay" id = "imageSection" data-stellar-background-ratio="1.0" style="background-image: url('images/wallpaper-darkblue-2.jpg'); background-position: center; height: calc(104vh);"> -->
         <!-- <div class="slider-item bread-wrap" style="will-change: scroll-position; overflow-y: auto; height: 100%; background-image: url('images/green_gradient.png'); opacity: 1.0; transform: translate3d(0px, 0px, 0px); position: absolute; top: 0; right: 0; bottom: 0; left: 0;" data-depth="-1.0" data-type="parallax"></div> -->
         <div class="container">
             <div class="row slider-text align-items-center justify-content-start">
                 <div class="col-lg-6 text-left col-sm-12">
-                    <h1 class="mb-4" style="color: #ffffff;">THE BRAINS BEHIND BERKELEY.</h1>
-                    <p style="color: #ffffff;">Neurotech@Berkeley is a hub for discussing the myriad technologies used in research and industry to collect, analyze, and utilize signals from the brain.</p>
+                    <h1 class="mb-4" style="color: #ffffff;">NEUROTECH @BERKELEY</h1>
+                    <p style="color: #ffffff;">UC Berkeley's student-run community for researching and facilitating advancements in the field of neurotechnology.</p>
                 </div>
+
+                <div class="col-lg-6 text-right">
+                    <div class="image-container">
+                        <img src="images/logotext-white.png" alt="Circular Texts" id="circularTexts">
+                        <!-- circularNtab -->
+                        <img src="images/overlapLogo2.png" alt="Overlap Logo" id="overlapLogo2">
+                    </div>
+                </div>
+                
+
             </div>
         </div>        
     </div>
