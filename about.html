@@ -106,6 +106,28 @@
             color: black !important;
         }
 
+        /* Center-align the title and subtitle text */
+.ftco-animate.mb-4.text-center.fadeInUp.ftco-animated h1,
+.ftco-animate.mb-4.text-center.fadeInUp.ftco-animated p {
+    text-align: center;
+}
+
+/* Center the container div */
+.row.slider-text.justify-content-center.align-items-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust the container div for large screens */
+@media (min-width: 768px) {
+    .col-md-10.col-sm-12.ftco-animate.mb-4.text-center.fadeInUp.ftco-animated {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+
 
         /* media format responsive: */
         @media (max-width: 768px) {

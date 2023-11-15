@@ -212,14 +212,14 @@
             font-weight: bold;
         }
         .image-container {
-    position: relative;
-    text-align: right; /* Aligns the container to the right */
-    height: 300px; /* Adjust based on your image size */
-    width: 300px; /* Ensure there's enough width */
-    margin-right: auto; /* This will push the container to the right */
-    margin-left: 200px; /* Adjust this to create space from the left side (or from the title) */
-    margin-top: -70px; /* New line added - adjust this value to move the images up */
-}
+            position: relative;
+            text-align: right; /* Aligns the container to the right */
+            height: 300px; /* Adjust based on your image size */
+            width: 300px; /* Ensure there's enough width */
+            margin-right: auto; /* This will push the container to the right */
+            margin-left: 250px; /* Adjust this to create space from the left side (or from the title) */
+            margin-top: -50px; /* New line added - adjust this value to move the images up */
+        }
 
 #overlapLogo2, #circularTexts {
     position: absolute;
@@ -271,6 +271,21 @@
                 text-align: center;
             }
         }
+        /* Base style for large screens */
+.col-lg-6.text-left.col-sm-12 {
+    text-align: left; /* Keep it left aligned */
+    padding-left: 15%; /* Adjust this value as needed */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .col-lg-6.text-left.col-sm-12 {
+        text-align: center; /* Center-align on smaller screens */
+        padding-left: 0; /* Remove padding on smaller screens */
+    }
+}
+
+
 
 @media (max-width: 768px) {
     /* Centering title and subtitle */
@@ -346,7 +361,7 @@
             <div class="row slider-text align-items-center justify-content-start">
                 <div class="col-lg-6 text-left col-sm-12">
                     <h1 class="mb-4" style="color: #ffffff;">NEUROTECH @BERKELEY.</h1>
-                    <p style="color: #ffffff;">UC Berkeley's student-run community for researching and facilitating advancements in the field of neurotechnology</p>
+                    <p style="color: #ffffff;">UC Berkeley's student-run community for researching and facilitating advancements in the field of neurotechnology.</p>
                 </div>
 
                 <div class="col-lg-6 text-right">
