@@ -200,7 +200,13 @@
         }
 
         /* media format responsive: */
-
+        @media (max-width: 768px) {
+            .custom-longer-image {
+                width: 100%; /* Make the image take full width of the container */
+                height: auto; /* Maintain aspect ratio */
+                object-fit: cover; /* This will cover the area without stretching the image */
+            }
+        }
         @media (max-width: 768px) {
                 .transparent-box {
                     max-width: 90%;
@@ -319,10 +325,9 @@
                         <div class="rounded-box">
                             <h1 class="mb-3 bread" style="color: #ffffff;">Software & Devices</h1>
                             <p class="custom-breadcrumbs">
-                              Products for the mind, by the mind. Neurotech@Berkeley’s devices and software 
+                              Products for the mind, by the mind. Our devices and software 
                               divisions aim to help members develop the skills to design products for the future.
                               </p>
-                            <p class="custom-breadcrumbs"><i>Golden bears creating hardwares.</i></p>
                         </div>
                     </div>
                 </div>
