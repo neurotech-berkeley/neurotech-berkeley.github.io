@@ -119,6 +119,26 @@
     align-items: center;
 }
 
+/* Center-align the text within the container */
+.inner-page .col-md-10 {
+    text-align: center;
+}
+
+/* Additional adjustments for the title and subtitle for specific screens */
+@media (min-width: 768px) {
+    .inner-page .col-md-10 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+/* Ensure the bread class (title) is centered */
+.bread {
+    margin: 0 auto;
+    display: block;
+}
+
+
 /* Adjust the container div for large screens */
 @media (min-width: 768px) {
     .col-md-10.col-sm-12.ftco-animate.mb-4.text-center.fadeInUp.ftco-animated {

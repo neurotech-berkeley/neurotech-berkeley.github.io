@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
- .slider-text {
+ /* .slider-text {
     position: absolute;
     top: 50%;
     left: 10%;
@@ -14,13 +14,13 @@
 
 .slider-text h1 {
     color: white;
-    font-size: 2.5em; /* Adjust as needed */
+    font-size: 2.5em;
 }
 
 .slider-text p {
     color: white;
-    font-size: 1em; /* Adjust for smaller text */
-}
+    font-size: 1em; 
+} */
 
  #particles-js {
     position: absolute;
