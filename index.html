@@ -44,9 +44,19 @@
     background-color: rgba(5, 88, 105, 0.8); /* Teal color with transparency */
     z-index: -1;
 }
-
+        /* IMPORTANT!! */
+        body, html {
+            max-width: 100vw; /* Ensure maximum width is not more than viewport width */
+            overflow-x: hidden; /* Hide horizontal overflow */
+        }
 
         @media (max-width: 768px) {
+            .navbar.navbar-expand-lg {
+                background-color: transparent !important;
+            }
+            .slider-text {
+                margin-top: 120px; /* Adjust this value as needed */
+            }
             h1 {
                 color: white !important;
             }
@@ -213,7 +223,7 @@
     width: 300px; /* Ensure there's enough width */
     margin-right: auto; /* This will push the container to the right */
     margin-left: 200px; /* Adjust this to create space from the left side (or from the title) */
-    margin-top: -80px; /* New line added - adjust this value to move the images up */
+    margin-top: -70px; /* New line added - adjust this value to move the images up */
 }
 
 #overlapLogo2, #circularTexts {
@@ -251,6 +261,7 @@
             p {
                 line-height: 1.5;
             }
+            
         }
 
         /* media format responsive: */
@@ -265,6 +276,21 @@
                 text-align: center;
             }
         }
+
+@media (max-width: 768px) {
+    /* Centering title and subtitle */
+    .col-lg-6.text-left.col-sm-12 h1,
+    .col-lg-6.text-left.col-sm-12 p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Hiding overlapping images */
+    .image-container img {
+        display: none;
+    }
+}
 
         @media (max-width: 768px) {
             .navbar-brand #logoText {
