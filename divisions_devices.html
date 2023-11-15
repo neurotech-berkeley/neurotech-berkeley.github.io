@@ -106,9 +106,12 @@
         .center-cards {
             justify-content: center;
         }
-        .project-card-blurb {
-            flex: 0 1 65%;
-            margin: 0.75rem 0.5rem 0.25rem 0.5rem;
+        
+        .project-card-blurb p:first-child {
+          background-color: #f0f0f0;
+          padding: 5px 10px; /* Padding around the text */
+          border-radius: 10px; /* More rounded corners */
+          display: inline-block; /* To fit the size of the content */
         }
         .project-card-links {
             flex: 0 1 15%;
@@ -144,15 +147,10 @@
         .project-card {
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-
             background: #fff;
-            /* -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
-            -moz-box-shadow: 0px 4px 10px -12px #65b9c4;
-            -ms-box-shadow: 0px 4px 10px -12px #65b9c4;
-            -o-box-shadow: 0px 4px 10px -12px #65b9c4; */
-            /* box-shadow: 0px 4px 10px -12px #65b9c4; */
             border: 1px solid #65b9c4;
             margin: 1rem 0 1rem 0;
+            padding: 20px; /* Increased padding inside the card */
         }
         /* .project-card {
             background: #fff;
@@ -684,11 +682,15 @@
               <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
                 <div class="project-card w-100" data-aos-delay="100">
                   <div class="text project-card-title justify-content-center">
-                    <img src="images/canine.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    <img src="images/caninebci.png" class="img-project" style="max-width: 100%; height: 150px;">                    
                 </div>
                   <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      Canine fNIRS BCI
+                    </p>
                     <p>
-                      Built an fNIRS headset for dogs for tracking oxygenation of their olfactory bulb to detect disease states of their owners                    </p>
+                      Built an fNIRS headset for dogs for tracking oxygenation of their olfactory bulb to detect disease states of their owners                    
+                    </p>
                   </div>
                   <div class="text project-card-links">
                     <div class="meta mb-3">
@@ -701,6 +703,29 @@
               </div>
 
               <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/tunablePCB.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                      Tunable PCB for EMG/EEG
+                    </p>
+                    <p>
+                      An EOG headset and application for monitoring productivity during work sessions. Analyzes EOG signals to measure focus, fatigue, and alertness and displays metrics in a dashboard.
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                    <div class="meta mb-3">
+                      
+                      <div style="color: palevioletred;">[Coming soon]</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
                 <div class="project-card w-100" data-aos-delay="100">
                   <div class="text project-card-title justify-content-center">
                     <img src="images/devices_focuspocus.png" class="img-project" style="max-width: 100%; height: 150px;">                    
@@ -718,17 +743,17 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
 
               <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
                 <div class="project-card w-100" data-aos-delay="100">
                   <div class="text project-card-title justify-content-center">
-                    <img src="images/devices_museeg_logo.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    <img src="images/eegMusic.png" class="img-project" style="max-width: 100%; height: 150px;">                    
                 </div>
                   <div class="text project-card-blurb">
                     <p style = "font-weight: 900; color: black; font-size: 1.1em;">
-                      MusEEG
+                      EEG Music
                     </p>
                     <p>
                       EEG Music project on mood classification and playback control                   
