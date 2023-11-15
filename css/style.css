@@ -86,12 +86,21 @@
     border-radius: 0 0 3px 3px;
   }
 
- @font-face {
+  @font-face {
+    font-family: 'Righteous';
+    src: url('fonts/righteous.woff2') format('woff2'),
+         url('fonts/righteous.woff') format('woff'),
+         url('fonts/righteous.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ /* @font-face {
     font-family: 'Righteous';
     src: url('fonts/righteous.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 #logoText {
     font-family: 'Righteous', sans-serif;
