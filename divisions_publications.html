@@ -226,6 +226,14 @@
         .dropdown-item:hover {
             background-color: teal !important;
         }
+        @media (max-width: 768px) {
+            .custom-longer-image {
+                width: 100%; /* Make the image take full width of the container */
+                height: auto; /* Maintain aspect ratio */
+                object-fit: cover; /* This will cover the area without stretching the image */
+            }
+        }
+
     </style>
 
 </head>

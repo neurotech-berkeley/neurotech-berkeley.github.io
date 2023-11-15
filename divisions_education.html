@@ -87,6 +87,14 @@
         .dropdown-item:hover {
             background-color: teal !important;
         }
+        @media (max-width: 768px) {
+            .custom-longer-image {
+                width: 100%; /* Make the image take full width of the container */
+                height: auto; /* Maintain aspect ratio */
+                object-fit: cover; /* This will cover the area without stretching the image */
+            }
+        }
+
 
     </style>
 
@@ -158,7 +166,6 @@
                             <h1 class="mb-3 bread" style="color: #ffffff;">Education</h1>
                             <p class="custom-breadcrumbs">Spreading knowledge and passion for neurotech through a
                                 student-led DeCal, Intro to Neurotechnology.</p>
-                            <p class="custom-breadcrumbs"><i>Nurturing neurotech newcomers.</i></p>
                         </div>
                     </div>
                 </div>
