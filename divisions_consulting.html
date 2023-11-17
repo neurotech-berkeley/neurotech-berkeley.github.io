@@ -25,6 +25,7 @@
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
     <style>
+
         @font-face {
             font-family: 'Righteous';
             src: url('fonts/righteous.ttf') format('truetype');
@@ -41,7 +42,7 @@
         h1 {
             font-family: 'Righteous', sans-serif;
         }
-       .nav-item .dropdown-menu .dropdown-item:hover {
+      .nav-item .dropdown-menu .dropdown-item:hover {
           background-color: #3B9C9C !important;
       }
         .rounded-box {
@@ -80,6 +81,116 @@
             display: block;
             margin: 0 auto 10px; /* centers the image and adds a 10px margin below */
         }
+        /* new */
+        .pb-4, .py-4 {
+            padding-bottom: 1.5rem !important;
+        }
+        .mb-4, .my-4 {
+            margin-bottom: 1.5rem !important;
+        }
+        .justify-content-center {
+            justify-content: center !important;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        .center-cards {
+            justify-content: center;
+        }
+        
+        .project-card-blurb p:first-child {
+          background-color: #f0f0f0;
+          padding: 5px 10px; /* Padding around the text */
+          border-radius: 10px; /* More rounded corners */
+          display: inline-block; /* To fit the size of the content */
+        }
+        .project-card-links {
+            flex: 0 1 15%;
+            margin: 0.25rem 0.5rem 0.5rem 0.5rem;
+        }
+        .mb-3, .my-3 {
+            margin-bottom: 1rem !important;
+        }
+        .block-with-flex {
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: auto;
+            position: relative;
+            display: flex;
+        }
+        /* .ftco-animate {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .fadeInUp {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+
+        .ftco-animated {
+            -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        } */
+        .project-card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            background: #fff;
+            border: 1px solid #65b9c4;
+            margin: 1rem 0 1rem 0;
+            padding: 20px; /* Increased padding inside the card */
+        }
+        /* .project-card {
+            background: #fff;
+            -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -moz-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -ms-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -o-box-shadow: 0px 4px 10px -12px #65b9c4;
+            box-shadow: 0px 4px 10px -12px #65b9c4;
+            border: 1px solid #65b9c4;
+            margin: 1rem 0 1rem 0;
+        } */
+        /* .project-card {
+            background: #fff;
+            -webkit-box-shadow: 0px 4px 10px -12px #65b9c4;
+            -moz-box-shadow: 0px 4px 10px -12px #efac78;
+            -ms-box-shadow: 0px 4px 10px -12px #efac78;
+            -o-box-shadow: 0px 4px 10px -12px #efac78;
+            box-shadow: 0px 4px 10px -12px #efac78;
+            border: 1px solid #fed1ac;
+            margin: 1rem 0 1rem 0;
+        } */
+        .project-card .text {
+            position: relative;
+            border-top: 0;
+            border-radius: 2px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .project-card .text {
+            position: relative;
+            display: block;
+        }
+        .project-card-title {
+            flex: 0 1 25%;
+            margin: 1.5rem 0.5rem 0.75rem 0.5rem;
+        }
+        .justify-content-center {
+            justify-content: center !important;
+        }
         .dropdown-menu {
             background-color: white !important;
         }
@@ -87,6 +198,8 @@
         .dropdown-item:hover {
             background-color: teal !important;
         }
+
+        /* media format responsive: */
         @media (max-width: 768px) {
             .custom-longer-image {
                 width: 100%; /* Make the image take full width of the container */
@@ -94,8 +207,57 @@
                 object-fit: cover; /* This will cover the area without stretching the image */
             }
         }
+        @media (max-width: 768px) {
+                .transparent-box {
+                    max-width: 90%;
+                    margin: 20px 5%;
+                }
+            }
+        @media (max-width: 768px) {
+            .footer-link {
+                text-align: center;
+            }
+        }
 
+        @media (max-width: 768px) {
+            .navbar-brand #logoText {
+                font-size: 15px !important; 
+            }
+        }
 
+        @media (max-width: 768px) {
+            .navbar.navbar-expand-lg.bg-dark.custom-header {
+                background-color: rgba(0, 0, 0, 0.8) !important;
+            }
+        }
+        /* moblie version for navigation: */
+        .navbar-toggler-icon {
+            display: inline-block;
+            width: 22px;
+            height: 2px;
+            background-color: white;
+            position: relative;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: "";
+            background-color: white;
+            display: block;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            transition: all 0.3s;
+        }
+
+        .navbar-toggler-icon::before {
+            top: -7px;
+        }
+
+        .navbar-toggler-icon::after {
+            bottom: -7px;
+        }
     </style>
 
 </head>
@@ -208,6 +370,221 @@
             </div>
         </div>
     </section>
+
+
+
+
+    <section class="ftco-section gray-background">
+        <div class="container">
+          <div id="recent-projects">
+            <div class="row justify-content-center mb-4 pb-4">
+              <div class="col-md-10 text-center heading-section ftco-animate fadeInUp ftco-animated">
+                <br>
+                <br>
+                <br>
+                <h2 style="font-weight: 900;">Our Industry Projects</h2>
+              </div>
+            </div>
+            <div class="row center-cards">
+
+                <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/neurode.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                            <a href="https://www.neurode.com.au/" target="_blank" style="color: black; text-decoration: none;">Neurode</a>
+                        </p>
+                        <p>
+                            Developed a mobile game to pair with Neurode’s headset.
+                            Headset records the gaming data and shows visualizations and neurological info afterwards.
+                            Games activate core cognitive functions and mentally engage the user.
+                            Built an eye-tracking Python workflow that can be integrated to Neurode's headsets.
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/ceribell.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                            <a href="https://ceribell.com/" target="_blank" style="color: black; text-decoration: none;">Ceribell</a>
+                        </p>
+                        <p>
+                            Anomaly Detection Project: statistical testing
+                            (visualize distributions, 
+                            run statistical tests for dataset features, etc.)
+                            & unsupervised clustering (apply dimensionality reduction on 
+                            raw feature data, run K-mean clustering on the reduced-dimensional 
+                            data, & visualize the new clusters)
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/clarity.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                            <a href="https://clarity-technologies.com/index.php" target="_blank" style="color: black; text-decoration: none;">Clarity</a>
+                        </p>
+                        <p>
+                            Developed a website for Clarity’s VR and therapeutic tool. Website used to display final
+                            results of VR treatment. Show patient info, spectrograms, and other graphs from stimulations in the experiment.
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/neurosity.jpeg" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                            <a href="https://neurosity.co/" target="_blank" style="color: black; text-decoration: none;">Neurosity</a>
+                        </p>
+                        <p>
+                            Developed website that predicts music genres from EEG data for user focus.
+                            Runs different musical genres and maximizes the probability of focus throughout the experiment.
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/consulting-neurable3.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                            <a href="https://www.neurable.com/" target="_blank" style="color: black; text-decoration: none;">Neurable</a>
+                        </p>
+                        <p>
+                            Built Proof of concept for a gyroscope in Neurable’s EEG headsets.
+                            Built amplitude-based classifiers for different movements.
+                            Worked on EEG Data Processing Pipeline, data Smoothing and dimensionality reduction. PCA and ICA on the EEG data.
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                      </div>
+                    </div>
+                  </div>
+    
+
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/neuroscape.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                            <a href="https://neuroscape.ucsf.edu/" target="_blank" style="color: black; text-decoration: none;">Neuroscape</a>
+                        </p>
+                        <p>
+                            Developed visualizations for two pathways on Neuroscape’s optimized treatment for patients with 
+                            PTSD and depression. Biopath: Non-brain signals (muscle, heart, eye tracking, etc.). 
+                            Biosemi: High-density EEG.
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/neurofit-2.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                            <a href="https://www.neurofit.tech/" target="_blank" style="color: black; text-decoration: none;">Neurofit</a>
+                        </p>
+                        <p>
+                            Assistance in building Neurofit’s new product and headset. Worked with Dr. Quinn Kennedy and Dr. Dorion Liston to
+                            design mockup sketches of the Pathways app & spent two semesters working with iPad's ARKit signals.
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                    <div class="project-card w-100" data-aos-delay="100">
+                      <div class="text project-card-title justify-content-center">
+                        <img src="images/neurable-22.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                    </div>
+                      <div class="text project-card-blurb">
+                        <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                            <a href="https://www.neurable.com" target="_blank" style="color: black; text-decoration: none;">Neurable</a>
+                        </p>
+                        <p>
+                            Launched two software tools to be used in Neurable’s public demos of their BCI headset.
+                            Developed real-time visualization on EEG data & configurable electrode heatmap based on impedance threshold values. 
+                        </p>
+                      </div>
+                      <div class="text project-card-links">
+                      </div>
+                    </div>
+                  </div>
+
+
+
+              <div class="col-md-4 block-with-flex ftco-animate fadeInUp ftco-animated">
+                <div class="project-card w-100" data-aos-delay="100">
+                  <div class="text project-card-title justify-content-center">
+                    <img src="images/consulting-neurable3.png" class="img-project" style="max-width: 100%; height: 150px;">                    
+                </div>
+                  <div class="text project-card-blurb">
+                    <p style = "font-weight: 900; color: black; font-size: 1.1em;">
+                        <a href="https://www.neurable.com" target="_blank" style="color: black; text-decoration: none;">Neurable</a>
+                    </p>
+                    <p>
+                        Development of real-time EEG neurofeedback game using Unity3D.
+                        Included EEG streaming infra for real-time ML processing & visualizations
+                        of raw data, spectrograms, and various cognitive features.
+                    </p>
+                  </div>
+                  <div class="text project-card-links">
+                  </div>
+                </div>
+            </div>
+
+              
+
+
+              
+
+            </div>
+            </div>
+          </div>
+          <br><br><br>
+      </section>
     
     
 
